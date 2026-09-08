@@ -25,7 +25,7 @@ def train_recon_model():
         'recon_scan_activity_score': 'scan_activity_score'
     })
     
-    model = IsolationForest(n_estimators=100, contamination=0.01, random_state=42)
+    model = IsolationForest(n_estimators=15, contamination=0.01, random_state=42)
     if not X_train.empty:
         model.fit(X_train)
     else:

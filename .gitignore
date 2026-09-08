@@ -10,3 +10,4 @@ models/train/results/*.pt
 models/train/results/*.txt
 models/train/training_data.csv
 alerting/calibrators/*.pkl
+.agents/

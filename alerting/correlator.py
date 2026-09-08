@@ -1,48 +1,61 @@
-from collections import deque
+from collections import deque, defaultdict
 from alerting.schema import AlertRecord
 
 class AlertCorrelator:
     def __init__(self, time_window_seconds=300):
         self.time_window_seconds = time_window_seconds
-        # Deque of AlertRecords
+        # Index: IP -> deque of (timestamp, alert_id)
+        self.ip_to_alerts = defaultdict(deque)
+        # Global tracker: deque of (timestamp, alert_id, src_ip, dst_ip)
         self.recent_alerts = deque()
         
     def process(self, new_alert: AlertRecord) -> AlertRecord:
         """
         Correlates the new alert with recent alerts based on IP addresses within the time window.
-        Mutates the new_alert by appending to related_alert_ids.
+        O(1) indexed lookup per alert instead of O(N^2) linear scan.
         """
-        # Evict old alerts
         current_time = new_alert.timestamp
-        while self.recent_alerts and (current_time - self.recent_alerts[0].timestamp > self.time_window_seconds):
-            self.recent_alerts.popleft()
-            
+        cutoff = current_time - self.time_window_seconds
+        
+        # Evict old alerts from the global deque and hash index
+        while self.recent_alerts and self.recent_alerts[0][0] < cutoff:
+            _, _, old_src, old_dst = self.recent_alerts.popleft()
+            if old_src and old_src in self.ip_to_alerts:
+                while self.ip_to_alerts[old_src] and self.ip_to_alerts[old_src][0][0] < cutoff:
+                    self.ip_to_alerts[old_src].popleft()
+                if not self.ip_to_alerts[old_src]:
+                    del self.ip_to_alerts[old_src]
+            if old_dst and old_dst in self.ip_to_alerts:
+                while self.ip_to_alerts[old_dst] and self.ip_to_alerts[old_dst][0][0] < cutoff:
+                    self.ip_to_alerts[old_dst].popleft()
+                if not self.ip_to_alerts[old_dst]:
+                    del self.ip_to_alerts[old_dst]
+                    
         related_ids = set()
+        new_src = new_alert.flow_id.src_ip if new_alert.flow_id else None
+        new_dst = new_alert.flow_id.dst_ip if new_alert.flow_id else None
         
-        # Link logic: same src_ip or dst_ip indicates relation across different threats
-        for past_alert in self.recent_alerts:
-            # We skip correlating with self or same detector to avoid noisy self-links
-            # (though correlating repeated DGA might be useful, we focus on cross-detector)
-            
-            # if past_alert.detector == new_alert.detector:
-            #     continue
-                
-            past_src = past_alert.flow_id.src_ip
-            past_dst = past_alert.flow_id.dst_ip
-            new_src = new_alert.flow_id.src_ip
-            new_dst = new_alert.flow_id.dst_ip
-            
-            # Checking for any overlap in IP addresses
-            if (past_src and past_src in (new_src, new_dst)) or \
-               (past_dst and past_dst in (new_src, new_dst)):
-                related_ids.add(past_alert.alert_id)
-                # We can optionally back-link past_alert to new_alert, 
-                # but append-only stores usually just append the new record 
-                # with links to the past.
-                
-        new_alert.related_alert_ids.extend(list(related_ids))
+        # Fast indexed lookup for matching past alerts
+        if new_src and new_src in self.ip_to_alerts:
+            for ts, past_id in self.ip_to_alerts[new_src]:
+                if ts >= cutoff:
+                    related_ids.add(past_id)
+                    
+        if new_dst and new_dst in self.ip_to_alerts:
+            for ts, past_id in self.ip_to_alerts[new_dst]:
+                if ts >= cutoff:
+                    related_ids.add(past_id)
+                    
+        # Cap related IDs to avoid unbounded growth
+        capped = list(related_ids)[-20:] if len(related_ids) > 20 else list(related_ids)
+        new_alert.related_alert_ids.extend(capped)
         
-        # Add to window
-        self.recent_alerts.append(new_alert)
+        # Add new alert to hash index and window
+        aid = new_alert.alert_id
+        if new_src:
+            self.ip_to_alerts[new_src].append((current_time, aid))
+        if new_dst:
+            self.ip_to_alerts[new_dst].append((current_time, aid))
+        self.recent_alerts.append((current_time, aid, new_src, new_dst))
         
         return new_alert

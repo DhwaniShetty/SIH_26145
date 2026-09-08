@@ -26,7 +26,7 @@ def train_exfil_model():
         'exfil_inbound_bytes_ewma': 'inbound_bytes_ewma'
     })
     
-    model = IsolationForest(n_estimators=100, contamination=0.01, random_state=42)
+    model = IsolationForest(n_estimators=15, contamination=0.01, random_state=42)
     if not X_train.empty:
         model.fit(X_train)
     else:

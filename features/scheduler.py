@@ -37,15 +37,20 @@ class FeatureScheduler:
         """
         Feed packet metadata and parsed layers into the streaming features.
         """
+        protocol = meta.get('protocol')
+        
         # DDoS
-        self.ddos.update(meta)
+        if protocol in ('TCP', 'UDP', 'ICMP'):
+            self.ddos.update(meta, current_time)
         
         # Recon
-        self.recon.update(meta)
+        if protocol == 'TCP':
+            self.recon.update(meta)
         
         # Exfiltration
-        is_outbound = meta['src_ip'].startswith('10.') or meta['src_ip'].startswith('192.168.')
-        self.exfil.update(meta, is_outbound=is_outbound)
+        if meta.get('ip_len', 0) > 0:
+            is_outbound = meta['src_ip'].startswith('10.') or meta['src_ip'].startswith('192.168.')
+            self.exfil.update(meta, is_outbound=is_outbound)
         
         # Beaconing
         self.beaconing.update(meta, current_time)
@@ -111,6 +116,11 @@ class FeatureScheduler:
             "beaconing": self.beaconing.extract(src_ip, dst_ip),
             "exfil": self.exfil.extract()
         }
+        
+        # State Eviction sweeps to bound memory
+        self.ddos.sweep_stale_state(self.last_60s, ttl=60.0)
+        self.beaconing.sweep_stale_state(self.last_60s, ttl=120.0)
+        
         return vec
 
     def extract_all(self, src_ip, dst_ip):

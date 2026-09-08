@@ -44,3 +44,8 @@ class BeaconingFeatureExtractor:
             "iat_cv": cv,
             "dst_fan_in": fan_in
         }
+
+    def sweep_stale_state(self, current_time, ttl=120.0):
+        stale_pairs = [pair for pair, data in self.flow_iats.items() if (current_time - data['last_time']) > ttl]
+        for pair in stale_pairs:
+            del self.flow_iats[pair]

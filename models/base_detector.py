@@ -21,3 +21,13 @@ class BaseDetector(ABC):
                                             Must not be empty for true positives.
         """
         pass
+
+    def predict_batch(self, feature_vectors: list):
+        """
+        Consumes a list of feature vector dictionaries and returns a list of prediction tuples.
+        Useful for bulk evaluation to avoid loop overhead. Base implementation just loops.
+        """
+        results = []
+        for fv in feature_vectors:
+            results.append(self.predict(fv))
+        return results

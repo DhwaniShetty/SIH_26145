@@ -10,3 +10,14 @@ fastapi
 uvicorn
 matplotlib
 httpx
+
+# Phase 2: Kafka transport
+confluent-kafka>=2.3.0
+
+# Phase 3: ONNX inference
+onnxruntime>=1.18.0
+skl2onnx>=1.16.0
+onnx>=1.16.0
+
+# Phase 4: ClickHouse storage
+clickhouse-driver>=0.2.9

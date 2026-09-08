@@ -16,6 +16,46 @@ from typing import List, Optional, Dict, Any
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from alerting.store import AlertStore
 
+# Production mode: Kafka + ClickHouse
+PIPELINE_MODE = os.environ.get("PIPELINE_MODE", "local")  # "local" or "kafka"
+KAFKA_BROKER = os.environ.get("KAFKA_BROKER", "kafka:9092")
+CLICKHOUSE_HOST = os.environ.get("CLICKHOUSE_HOST", "clickhouse")
+CLICKHOUSE_PORT = int(os.environ.get("CLICKHOUSE_PORT", "9000"))
+
+# Kafka live alert + telemetry queue (only used in kafka mode)
+_kafka_alert_queue: "queue.Queue" = None  # populated in lifespan when PIPELINE_MODE=kafka
+_kafka_telem_queue: "queue.Queue" = None
+
+def _start_kafka_consumers():
+    """Spawn background threads to consume alerts-normalized and telemetry Kafka topics."""
+    import queue as _queue
+    global _kafka_alert_queue, _kafka_telem_queue
+    _kafka_alert_queue = _queue.Queue(maxsize=2000)
+    _kafka_telem_queue = _queue.Queue(maxsize=100)
+
+    def _consume(topic, q):
+        try:
+            from confluent_kafka import Consumer, KafkaError
+            c = Consumer({
+                "bootstrap.servers": KAFKA_BROKER,
+                "group.id": f"dashboard-{topic}",
+                "auto.offset.reset": "latest",
+                "enable.auto.commit": True,
+            })
+            c.subscribe([topic])
+            while True:
+                msg = c.poll(timeout=0.1)
+                if msg is None or msg.error(): continue
+                try:
+                    q.put_nowait(json.loads(msg.value()))
+                except Exception:
+                    pass
+        except Exception as e:
+            import logging; logging.getLogger("server").error(f"Kafka consumer ({topic}) error: {e}")
+
+    threading.Thread(target=_consume, args=("alerts-normalized", _kafka_alert_queue), daemon=True).start()
+    threading.Thread(target=_consume, args=("telemetry", _kafka_telem_queue), daemon=True).start()
+
 from contextlib import asynccontextmanager
 
 import time
@@ -102,12 +142,20 @@ def seed_baseline_alerts(store_target: AlertStore):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Fast instant initialization without blocking the event loop
-    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tests/test_alerts.db'))
-    store = AlertStore(db_path=db_path)
-    store.clear()
-    seed_baseline_alerts(store)
-    summary_cache.invalidate()
+    global store
+    if PIPELINE_MODE == "kafka":
+        # Production: use ClickHouse store + start Kafka consumers
+        from alerting.clickhouse_store import ClickHouseAlertStore
+        store = ClickHouseAlertStore(host=CLICKHOUSE_HOST, port=CLICKHOUSE_PORT)
+        _start_kafka_consumers()
+        import logging; logging.getLogger("server").info("Running in KAFKA/ClickHouse mode.")
+    else:
+        # Local dev: use SQLite store
+        db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tests/test_alerts.db'))
+        store = AlertStore(db_path=db_path)
+        store.clear()
+        seed_baseline_alerts(store)
+        summary_cache.invalidate()
     yield
 
 app = FastAPI(title="Threat-Detect Dashboard API", lifespan=lifespan)
@@ -192,6 +240,14 @@ def get_current_telemetry() -> Dict[str, Any]:
 @app.get("/api/stats/telemetry")
 def get_telemetry():
     """Returns current passive link throughput, active flow counts, and processing latency."""
+    # In kafka mode, pull the latest snapshot off the telemetry queue
+    if PIPELINE_MODE == "kafka" and _kafka_telem_queue is not None:
+        snap = None
+        while not _kafka_telem_queue.empty():
+            try: snap = _kafka_telem_queue.get_nowait()
+            except Exception: break
+        if snap:
+            return snap
     return get_current_telemetry()
 
 @app.get("/api/stream")
@@ -208,16 +264,37 @@ async def stream_live_events(request: Request):
             if await request.is_disconnected():
                 break
 
-            # 1. Telemetry heartbeat (Throughput, Mbps, Flows, Latency)
-            telem = get_current_telemetry()
+            # 1. Telemetry heartbeat
+            if PIPELINE_MODE == "kafka" and _kafka_telem_queue is not None:
+                snap = None
+                while not _kafka_telem_queue.empty():
+                    try: snap = _kafka_telem_queue.get_nowait()
+                    except Exception: break
+                telem = snap if snap else get_current_telemetry()
+            else:
+                telem = get_current_telemetry()
             yield f"event: telemetry\ndata: {json.dumps(telem)}\n\n"
 
-            # 2. Push any new alerts from the SQLite store with zero latency
-            recent_alerts = store.read_alerts(start_time=last_ts)
-            for a in recent_alerts:
-                if a.alert_id not in sent_alert_ids:
-                    sent_alert_ids.add(a.alert_id)
-                    last_ts = max(last_ts, a.timestamp)
+            # 2. Push new alerts
+            if PIPELINE_MODE == "kafka" and _kafka_alert_queue is not None:
+                # Drain Kafka alert queue into SSE stream
+                drained = 0
+                while not _kafka_alert_queue.empty() and drained < 50:
+                    try:
+                        alert_dict = _kafka_alert_queue.get_nowait()
+                        alert_id = alert_dict.get("alert_id", "")
+                        if alert_id and alert_id not in sent_alert_ids:
+                            sent_alert_ids.add(alert_id)
+                            yield f"event: alert\ndata: {json.dumps(alert_dict)}\n\n"
+                        drained += 1
+                    except Exception:
+                        break
+            else:
+                recent_alerts = store.read_alerts(start_time=last_ts)
+                for a in recent_alerts:
+                    if a.alert_id not in sent_alert_ids:
+                        sent_alert_ids.add(a.alert_id)
+                        last_ts = max(last_ts, a.timestamp)
                     yield f"event: alert\ndata: {json.dumps(a.model_dump())}\n\n"
 
             await asyncio.sleep(0.8)
