@@ -1,5 +1,6 @@
 import os
 import joblib
+import numpy as np
 from models.base_detector import BaseDetector
 
 class ExfiltrationDetector(BaseDetector):
@@ -24,6 +25,10 @@ class ExfiltrationDetector(BaseDetector):
             "inbound_bytes_ewma": in_b
         }
         
+        # 0. Early exit gatekeeper
+        if out_b == 0.0 and in_b == 0.0:
+            return 0.0, features_used, ""
+
         # 1. Deterministic CUSUM-like threshold
         if out_in_ratio > 10.0 and out_b > 5000:
             score = 0.85
@@ -32,9 +37,8 @@ class ExfiltrationDetector(BaseDetector):
             
         # 2. Multivariate Isolation Forest anomaly detection
         if self.iso_model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
-            pred = self.iso_model.predict(df)[0]
+            X = np.array([list(features_used.values())], dtype=np.float32)
+            pred = self.iso_model.predict(X)[0]
             
             if pred == -1:
                 score = max(score, 0.75)

@@ -1,0 +1,12 @@
+scapy
+dpkt
+pydantic
+scikit-learn
+lightgbm
+torch
+pandas
+psutil
+fastapi
+uvicorn
+matplotlib
+httpx

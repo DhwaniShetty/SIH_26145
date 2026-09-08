@@ -61,26 +61,29 @@ class FeatureScheduler:
         # TLS
         if tls_parsed:
             self.encrypted.update(meta, tls_parsed, current_time)
-            
-        self._check_windows(meta, current_time)
+        return self._check_windows(meta, current_time)
         
     def _check_windows(self, meta, current_time):
+        fired = {}
         if self.last_1s == 0:
             self.last_1s = current_time
             self.last_5s = current_time
             self.last_60s = current_time
             
         if current_time - self.last_1s >= self.window_1s:
-            self.emit_1s_window(meta['src_ip'], meta['dst_ip'])
+            fired.update(self.emit_1s_window(meta['src_ip'], meta['dst_ip']))
             self.last_1s = current_time
             
         if current_time - self.last_5s >= self.window_5s:
-            self.emit_5s_window(meta['src_ip'], meta['dst_ip'])
+            fired.update(self.emit_5s_window(meta['src_ip'], meta['dst_ip']))
             self.last_5s = current_time
             
         if current_time - self.last_60s >= self.window_60s:
-            self.emit_60s_window(meta['src_ip'], meta['dst_ip'])
+            fired.update(self.emit_60s_window(meta['src_ip'], meta['dst_ip']))
             self.last_60s = current_time
+            
+        fired.pop("type", None)
+        return fired
             
     def emit_1s_window(self, src_ip, dst_ip):
         # DDoS and Recon are highly volatile, emit every 1s

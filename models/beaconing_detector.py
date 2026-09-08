@@ -1,5 +1,6 @@
 import os
 import joblib
+import numpy as np
 from models.base_detector import BaseDetector
 
 class BeaconingDetector(BaseDetector):
@@ -24,6 +25,10 @@ class BeaconingDetector(BaseDetector):
             "dst_fan_in": fan_in
         }
         
+        # 0. Early exit gatekeeper
+        if mean_iat == 0.0:
+            return 0.0, features_used, ""
+
         # 1. Deterministic filter: Low CV indicates strict periodicity (C2 beacon)
         if mean_iat > 0 and cv < 0.1:
             score = 0.90
@@ -32,10 +37,10 @@ class BeaconingDetector(BaseDetector):
             
         # 2. SVM Model
         if self.model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
             # For OneClassSVM, -1 is outlier (anomaly), 1 is inlier (benign)
-            pred = self.model.predict(df[['iat_cv', 'mean_iat']])[0]
+            # We select only iat_cv and mean_iat for this model
+            X = np.array([[cv, mean_iat]], dtype=np.float32)
+            pred = self.model.predict(X)[0]
             if pred == -1:
                 # We expect normal traffic to have high CV (bursty). Low CV = anomaly.
                 if cv < 0.5:

@@ -64,7 +64,7 @@ class BoundedPcapReader:
         except queue.Full:
             pass
 
-    def get_packet(self, timeout=0.1):
+    def get_packet(self, timeout=0.005):
         """
         Retrieves a packet from the buffer.
         Returns (ts, buf) or (None, None) if EOF, or raises queue.Empty on timeout.

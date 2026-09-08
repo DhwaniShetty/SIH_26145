@@ -1,6 +1,6 @@
 import os
 import joblib
-import pandas as pd
+import numpy as np
 from typing import Tuple, Dict, Any
 
 from models.base_detector import BaseDetector
@@ -23,8 +23,13 @@ class DNSExfiltrationDetector(BaseDetector):
             return self._heuristic_predict(feature_vector)
             
         try:
-            df = pd.DataFrame([feature_vector])[self.features].fillna(0)
-            score = self.model.decision_function(df)[0]
+            # 0. Gatekeeper check
+            if feature_vector.get('txt_cname_rate', 0.0) == 0.0:
+                return 0.0, feature_vector, ""
+
+            vals = [feature_vector.get(k, 0.0) for k in self.features]
+            X = np.array([vals], dtype=np.float32)
+            score = self.model.decision_function(X)[0]
             # Convert isolation forest score to probability-like [0, 1]
             prob = 1.0 - (1.0 / (1.0 + float(score) + 1.0)) # approx normalization
             

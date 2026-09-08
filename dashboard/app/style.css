@@ -60,19 +60,58 @@ header {
     gap: 15px;
 }
 
+.scenario-select {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.scenario-select:hover {
+    border-color: var(--accent);
+}
+
+.scenario-select:focus {
+    border-color: var(--accent-hover);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
 .status {
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
 }
-.status.idle { background: rgba(148, 163, 184, 0.2); color: var(--text-muted); }
-.status.active { background: rgba(59, 130, 246, 0.2); color: var(--accent); animation: pulse 2s infinite; }
+
+.status.idle {
+    background: rgba(148, 163, 184, 0.2);
+    color: var(--text-muted);
+}
+
+.status.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent);
+    animation: pulse 2s infinite;
+}
 
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .btn {
@@ -104,8 +143,14 @@ header {
 
 .top-panels {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .top-panels {
+        grid-template-columns: 1fr;
+    }
 }
 
 .panel {
@@ -142,13 +187,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 6px;
     transition: background 0.2s;
 }
 
 .talkers-list li:hover {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .panel-header {
@@ -185,7 +230,7 @@ th {
 
 td {
     padding: 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 tbody tr {
@@ -194,7 +239,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateX(4px);
 }
 
@@ -205,16 +250,35 @@ tbody tr:hover {
     font-size: 0.75rem;
     font-weight: 700;
 }
-.badge.critical { background: rgba(239, 68, 68, 0.2); color: var(--critical); }
-.badge.high { background: rgba(249, 115, 22, 0.2); color: var(--high); }
-.badge.medium { background: rgba(234, 179, 8, 0.2); color: var(--medium); }
-.badge.low { background: rgba(59, 130, 246, 0.2); color: var(--low); }
+
+.badge.critical {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--critical);
+}
+
+.badge.high {
+    background: rgba(249, 115, 22, 0.2);
+    color: var(--high);
+}
+
+.badge.medium {
+    background: rgba(234, 179, 8, 0.2);
+    color: var(--medium);
+}
+
+.badge.low {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--low);
+}
 
 /* Modal */
 .modal {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
@@ -245,7 +309,8 @@ tbody tr:hover {
 
 .close-btn {
     position: absolute;
-    top: 15px; right: 20px;
+    top: 15px;
+    right: 20px;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--text-muted);
@@ -259,7 +324,7 @@ tbody tr:hover {
 }
 
 .code-block {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 12px;
     border-radius: 6px;
     font-family: monospace;

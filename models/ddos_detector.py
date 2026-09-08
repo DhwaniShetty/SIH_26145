@@ -1,5 +1,6 @@
 import os
 import joblib
+import numpy as np
 from models.base_detector import BaseDetector
 
 class DDoSDetector(BaseDetector):
@@ -25,6 +26,10 @@ class DDoSDetector(BaseDetector):
             "dst_pkt_ewma": pkt_ewma
         }
         
+        # 0. Early exit gatekeeper
+        if pkt_ewma < 2.0 and syn_ratio < 2.0:
+            return 0.0, features_used, ""
+            
         # 1. Fast CUSUM / EWMA triage rule (e.g. syn ratio > 10)
         if syn_ratio > 10.0:
             score = 0.95
@@ -33,17 +38,16 @@ class DDoSDetector(BaseDetector):
             
         # 2. LightGBM / Isolation Forest prediction
         if self.model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
+            X = np.array([list(features_used.values())], dtype=np.float32)
             # For Isolation Forest, -1 is anomaly, 1 is normal
             # For LightGBM, predict_proba
             if hasattr(self.model, "predict_proba"):
-                probs = self.model.predict_proba(df)[0]
+                probs = self.model.predict_proba(X)[0]
                 score = probs[1] if len(probs) > 1 else probs[0]
                 if score > 0.5:
                     explanation = f"LGBM classifier flagged flow with confidence {score:.2f}."
             else:
-                pred = self.model.predict(df)[0]
+                pred = self.model.predict(X)[0]
                 if pred == -1:
                     score = 0.8
                     explanation = "Isolation Forest detected volumetric anomaly."

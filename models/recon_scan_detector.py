@@ -1,5 +1,6 @@
 import os
 import joblib
+import numpy as np
 from models.base_detector import BaseDetector
 
 class ReconScanDetector(BaseDetector):
@@ -22,6 +23,10 @@ class ReconScanDetector(BaseDetector):
             "scan_activity_score": scan_activity
         }
         
+        # 0. Early exit gatekeeper
+        if scan_activity == 0.0:
+            return 0.0, features_used, ""
+
         # 1. Deterministic rules
         # Very high SYN ratio and significant activity indicates a scan
         if syn_ratio > 0.90 and scan_activity > 50:
@@ -31,9 +36,8 @@ class ReconScanDetector(BaseDetector):
             
         # 2. Isolation Forest for baseline anomaly scoring
         if self.iso_model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
-            pred = self.iso_model.predict(df)[0]
+            X = np.array([list(features_used.values())], dtype=np.float32)
+            pred = self.iso_model.predict(X)[0]
             
             if pred == -1:
                 score = max(score, 0.75)

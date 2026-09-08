@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threat-Detect Unidirectional Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=nocache3">
     <!-- Chart.js for graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- vis-network for temporal graph -->
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
+
 <body>
     <div class="dashboard-container">
         <header>
@@ -17,6 +17,14 @@
                 <span class="icon">🛡️</span> ThreatDetect <span class="highlight">Unidirectional</span>
             </div>
             <div class="controls">
+                <select id="select-scenario" class="scenario-select" title="Choose Attack Profile">
+                    <option value="random">🎲 Random Dynamic Threat Mix</option>
+                    <option value="massive_ddos">💥 Massive DDoS (Thousands of alerts, 0 C2)</option>
+                    <option value="stealth_c2_exfil">🕵️ Stealthy C2 & DNS Exfil (0 DDoS)</option>
+                    <option value="recon_storm">🔍 Reconnaissance Scans (0 DDoS, 0 C2)</option>
+                    <option value="quiet_hours">🕊️ Calm Baseline (Near 0 threats)</option>
+                    <option value="coordinated_campaign">⚡ Coordinated Multi-Vector Attack</option>
+                </select>
                 <span id="status-indicator" class="status idle">Idle</span>
                 <button id="btn-replay" class="btn primary">Start Live Demo Replay</button>
             </div>
@@ -35,10 +43,6 @@
                     <ul id="top-talkers-list" class="talkers-list">
                         <!-- Populated by JS -->
                     </ul>
-                </div>
-                <div class="panel glass" style="grid-column: span 2;">
-                    <h2>Temporal Attack Graph</h2>
-                    <div id="temporal-graph" style="height: 300px; width: 100%;"></div>
                 </div>
             </div>
 
@@ -98,6 +102,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=nocache3"></script>
 </body>
+
 </html>

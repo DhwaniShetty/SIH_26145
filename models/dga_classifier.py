@@ -1,40 +1,51 @@
 import os
 import math
 import joblib
-import torch
-import torch.nn as nn
+import numpy as np
 from models.base_detector import BaseDetector
-
-# Simple character-level LSTM
-class DGALSTM(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, hidden_dim):
-        super(DGALSTM, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
-        self.lstm = nn.LSTM(embedding_dim, hidden_dim, batch_first=True)
-        self.fc = nn.Linear(hidden_dim, 1)
-        self.sigmoid = nn.Sigmoid()
-
-    def forward(self, x):
-        embedded = self.embedding(x)
-        lstm_out, (hidden, cell) = self.lstm(embedded)
-        # Take the output of the last time step
-        last_hidden = hidden[-1, :, :]
-        out = self.fc(last_hidden)
-        return self.sigmoid(out)
 
 class DGAClassifier(BaseDetector):
     def __init__(self, gbt_model_path=None, lstm_model_path=None):
         self.gbt_model = None
         self.lstm_model = None
+        self.lstm_model_path = lstm_model_path
         
         if gbt_model_path and os.path.exists(gbt_model_path):
             self.gbt_model = joblib.load(gbt_model_path)
-            
-        if lstm_model_path and os.path.exists(lstm_model_path):
-            # Vocabulary size is assumed to be 256 for basic ASCII, embed_dim=16, hidden=32
-            self.lstm_model = DGALSTM(vocab_size=256, embedding_dim=16, hidden_dim=32)
-            self.lstm_model.load_state_dict(torch.load(lstm_model_path, map_location=torch.device('cpu')))
-            self.lstm_model.eval()
+
+    def _ensure_lstm_loaded(self):
+        """Lazy-loads PyTorch and the character-level LSTM weights only when requested."""
+        if self.lstm_model is not None:
+            return True
+        if not self.lstm_model_path or not os.path.exists(self.lstm_model_path):
+            return False
+
+        try:
+            import torch
+            import torch.nn as nn
+
+            class DGALSTM(nn.Module):
+                def __init__(self, vocab_size, embedding_dim, hidden_dim):
+                    super(DGALSTM, self).__init__()
+                    self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
+                    self.lstm = nn.LSTM(embedding_dim, hidden_dim, batch_first=True)
+                    self.fc = nn.Linear(hidden_dim, 1)
+                    self.sigmoid = nn.Sigmoid()
+
+                def forward(self, x):
+                    embedded = self.embedding(x)
+                    lstm_out, (hidden, cell) = self.lstm(embedded)
+                    last_hidden = hidden[-1, :, :]
+                    out = self.fc(last_hidden)
+                    return self.sigmoid(out)
+
+            model = DGALSTM(vocab_size=256, embedding_dim=16, hidden_dim=32)
+            model.load_state_dict(torch.load(self.lstm_model_path, map_location=torch.device('cpu')))
+            model.eval()
+            self.lstm_model = model
+            return True
+        except Exception:
+            return False
 
     def predict(self, feature_vector):
         score = 0.0
@@ -51,6 +62,10 @@ class DGAClassifier(BaseDetector):
             "nxdomain_rate": nxdomain
         }
         
+        # 0. Early exit gatekeeper
+        if avg_len == 0:
+            return 0.0, features_used, ""
+            
         # 1. Cheap pre-filter heuristic (Entropy + Length)
         if avg_ent > 3.5 and avg_len > 15:
             score = 0.7
@@ -62,10 +77,9 @@ class DGAClassifier(BaseDetector):
             
         # 2. GBT on volumetric features (NXDOMAIN, length, entropy)
         if self.gbt_model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
+            X = np.array([list(features_used.values())], dtype=np.float32)
             if hasattr(self.gbt_model, "predict_proba"):
-                probs = self.gbt_model.predict_proba(df)[0]
+                probs = self.gbt_model.predict_proba(X)[0]
                 gbt_score = probs[1] if len(probs) > 1 else probs[0]
                 
                 if gbt_score > 0.5:
@@ -78,9 +92,10 @@ class DGAClassifier(BaseDetector):
         """
         Directly predict on a single domain string using the LSTM.
         """
-        if not self.lstm_model:
+        if not self._ensure_lstm_loaded():
             return 0.0, "LSTM not loaded"
-            
+
+        import torch
         # Convert string to tensor
         indices = [ord(c) for c in domain_str if ord(c) < 256]
         if not indices:

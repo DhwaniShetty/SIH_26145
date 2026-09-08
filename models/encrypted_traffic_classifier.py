@@ -37,11 +37,14 @@ class EncryptedTrafficClassifier(BaseDetector):
             "sni_length_ewma": sni_len
         }
         
+        # 0. Early exit gatekeeper
+        if not packet_sizes and not packet_ipts and sni_len == 0:
+            return 0.0, features_used, ""
+
         if self.rf_model:
-            import pandas as pd
-            df = pd.DataFrame([features_used])
+            X = np.array([list(features_used.values())], dtype=np.float32)
             if hasattr(self.rf_model, "predict_proba"):
-                probs = self.rf_model.predict_proba(df)[0]
+                probs = self.rf_model.predict_proba(X)[0]
                 rf_score = probs[1] if len(probs) > 1 else probs[0]
                 
                 if rf_score > 0.5:
