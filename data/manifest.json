@@ -1,0 +1,58 @@
+﻿{
+  "datasets": [
+    {
+      "id": "cic-ids-2017",
+      "name": "CIC-IDS2017",
+      "source": "Canadian Institute for Cybersecurity",
+      "url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+      "license": "Research Use Only",
+      "description": "Benign and attack traffic in PCAP and CSV formats.",
+      "download_instructions": "Download via AWS S3 or Kaggle. (https://registry.opendata.aws/cse-cic-ids2018/)"
+    },
+    {
+      "id": "cic-ids-2018",
+      "name": "CSE-CIC-IDS2018",
+      "source": "Canadian Institute for Cybersecurity",
+      "url": "https://www.unb.ca/cic/datasets/ids-2018.html",
+      "license": "Research Use Only",
+      "description": "Benign and attack traffic on AWS.",
+      "download_instructions": "Download via AWS S3 bucket: aws s3 sync --no-sign-request --region us-east-2 s3://cse-cic-ids2018/ ."
+    },
+    {
+      "id": "cic-ddos-2019",
+      "name": "CIC-DDoS2019",
+      "source": "Canadian Institute for Cybersecurity",
+      "url": "https://www.unb.ca/cic/datasets/ddos-2019.html",
+      "license": "Research Use Only",
+      "description": "Modern DDoS attack traffic.",
+      "download_instructions": "Requires academic registration on CIC website."
+    },
+    {
+      "id": "ctu-13",
+      "name": "CTU-13 Dataset",
+      "source": "Stratosphere IPS",
+      "url": "https://www.stratosphereips.org/datasets-ctu13",
+      "license": "Open",
+      "description": "Botnet traffic.",
+      "download_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-13-Dataset/"
+    },
+    {
+      "id": "dga-corpus",
+      "name": "DGA Domain Corpus",
+      "source": "Netlab 360",
+      "url": "https://data.netlab.360.com/dga/",
+      "license": "Open",
+      "description": "Domain Generation Algorithm dataset.",
+      "download_url": "https://data.netlab.360.com/feeds/dga/dga.txt"
+    },
+    {
+      "id": "cic-darknet-2020",
+      "name": "CIC-Darknet2020",
+      "source": "Canadian Institute for Cybersecurity",
+      "url": "https://www.unb.ca/cic/datasets/darknet2020.html",
+      "license": "Research Use Only",
+      "description": "Encrypted traffic dataset.",
+      "download_instructions": "Requires academic registration on CIC website."
+    }
+  ]
+}

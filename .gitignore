@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+tests/test_alerts.db
+alerts.db
+data/*.pcap
+data/*.json
+!data/manifest.json
+models/train/results/*.pkl
+models/train/results/*.pt
+models/train/results/*.txt
+models/train/training_data.csv
+alerting/calibrators/*.pkl

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat-Detect Unidirectional Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- vis-network for temporal graph -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="logo">
+                <span class="icon">🛡️</span> ThreatDetect <span class="highlight">Unidirectional</span>
+            </div>
+            <div class="controls">
+                <span id="status-indicator" class="status idle">Idle</span>
+                <button id="btn-replay" class="btn primary">Start Live Demo Replay</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="top-panels">
+                <div class="panel glass">
+                    <h2>Alerts by Threat Class</h2>
+                    <div class="chart-container">
+                        <canvas id="classChart"></canvas>
+                    </div>
+                </div>
+                <div class="panel glass">
+                    <h2>Top Talkers (Source IPs)</h2>
+                    <ul id="top-talkers-list" class="talkers-list">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+                <div class="panel glass" style="grid-column: span 2;">
+                    <h2>Temporal Attack Graph</h2>
+                    <div id="temporal-graph" style="height: 300px; width: 100%;"></div>
+                </div>
+            </div>
+
+            <div class="main-panel glass">
+                <div class="panel-header">
+                    <h2>Recent Alerts</h2>
+                    <div class="filters">
+                        <select id="filter-severity">
+                            <option value="">All Severities</option>
+                            <option value="CRITICAL">Critical</option>
+                            <option value="HIGH">High</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="LOW">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="alerts-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Threat Class</th>
+                                <th>Severity</th>
+                                <th>Confidence</th>
+                                <th>Source</th>
+                                <th>Destination</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alerts-tbody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Drilldown -->
+    <div id="drilldown-modal" class="modal hidden">
+        <div class="modal-content glass">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Alert Details</h2>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Explanation</h3>
+                    <p id="modal-explanation" class="code-block"></p>
+                </div>
+                <div class="modal-section">
+                    <h3>Features</h3>
+                    <pre id="modal-features" class="code-block"></pre>
+                </div>
+                <div class="modal-section">
+                    <h3>Correlated Alerts</h3>
+                    <ul id="modal-related"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
