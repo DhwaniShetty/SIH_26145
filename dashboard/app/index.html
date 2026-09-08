@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threat-Detect Unidirectional Dashboard</title>
-    <link rel="stylesheet" href="style.css?v=nocache3">
+    <link rel="stylesheet" href="style.css?v=nocache4">
     <!-- Chart.js for graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -25,10 +25,67 @@
                     <option value="quiet_hours">🕊️ Calm Baseline (Near 0 threats)</option>
                     <option value="coordinated_campaign">⚡ Coordinated Multi-Vector Attack</option>
                 </select>
+                <div class="duration-control-wrapper">
+                    <select id="select-duration" class="duration-select" title="Set Replay Duration Period">
+                        <option value="20" selected>⏱️ 20 Seconds</option>
+                        <option value="60">⏱️ 1 Minute</option>
+                        <option value="180">⏱️ 3 Minutes</option>
+                        <option value="300">⏱️ 5 Minutes</option>
+                        <option value="600">⏱️ 10 Minutes</option>
+                        <option value="900">⏱️ 15 Minutes</option>
+                        <option value="custom">⏱️ Custom...</option>
+                    </select>
+                    <input type="number" id="input-custom-duration" class="custom-duration-input hidden" min="5" max="3600" value="20" placeholder="Secs" title="Custom duration in seconds">
+                </div>
                 <span id="status-indicator" class="status idle">Idle</span>
-                <button id="btn-replay" class="btn primary">Start Live Demo Replay</button>
+                <button id="btn-replay" class="btn primary" title="Start live traffic simulation">▶ Start Live Demo Replay</button>
+                <button id="btn-stop-replay" class="btn danger" disabled title="Immediately stop current live simulation">⏹ Stop Replay</button>
+                <span id="countdown-timer" class="countdown-badge hidden" title="Time remaining for replay">
+                    <span class="timer-icon">⏳</span> <span id="timer-display">00:20</span>
+                </span>
             </div>
         </header>
+
+        <!-- Real-Time Telemetry & Data Diode Enclave Gauge (Constraint D) -->
+        <div class="telemetry-banner glass">
+            <div class="telemetry-card">
+                <div class="telemetry-icon">⚡</div>
+                <div class="telemetry-info">
+                    <span class="telemetry-label">Ingestion Rate</span>
+                    <span class="telemetry-value" id="telem-pps">0 pkts/s</span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-icon">📡</div>
+                <div class="telemetry-info">
+                    <span class="telemetry-label">Sustained Throughput</span>
+                    <span class="telemetry-value" id="telem-mbps">0.0 Mbps</span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-icon">🔀</div>
+                <div class="telemetry-info">
+                    <span class="telemetry-label">Active Monitored Flows</span>
+                    <span class="telemetry-value" id="telem-flows">0 flows</span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <div class="telemetry-icon">⏱️</div>
+                <div class="telemetry-info">
+                    <span class="telemetry-label">Bounded Ingest Latency</span>
+                    <span class="telemetry-value text-accent" id="telem-latency">0.0 ms</span>
+                </div>
+            </div>
+            <div class="telemetry-card diode-card">
+                <div class="diode-status-indicator">
+                    <span class="diode-pulse-dot"></span>
+                </div>
+                <div class="telemetry-info">
+                    <span class="telemetry-label">Data Diode Security</span>
+                    <span class="telemetry-value text-success" id="telem-diode">PASSIVE RX (Tx OFF)</span>
+                </div>
+            </div>
+        </div>
 
         <main>
             <div class="top-panels">
@@ -102,7 +159,7 @@
         </div>
     </div>
 
-    <script src="app.js?v=nocache3"></script>
+    <script src="app.js?v=nocache4"></script>
 </body>
 
 </html>

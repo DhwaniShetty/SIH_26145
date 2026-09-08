@@ -65,7 +65,7 @@ class FeatureScheduler:
         
     def _check_windows(self, meta, current_time):
         fired = {}
-        if self.last_1s == 0:
+        if self.last_1s == 0 or current_time < self.last_1s:
             self.last_1s = current_time
             self.last_5s = current_time
             self.last_60s = current_time

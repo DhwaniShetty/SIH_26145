@@ -223,7 +223,7 @@ def main():
 
     print(f"[{time.strftime('%H:%M:%S')}] Launching FastAPI via Uvicorn on port {args.port}...")
     api_process = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "dashboard.api.server:app", "--port", str(args.port)],
+        [sys.executable, "-m", "uvicorn", "dashboard.api.server:app", "--reload", "--port", str(args.port)],
         cwd=root_dir
     )
 
