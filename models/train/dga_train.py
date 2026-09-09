@@ -10,7 +10,21 @@ import random
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-from models.dga_classifier import DGALSTM
+
+class DGALSTM(nn.Module):
+    def __init__(self, vocab_size, embedding_dim, hidden_dim):
+        super(DGALSTM, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
+        self.lstm = nn.LSTM(embedding_dim, hidden_dim, batch_first=True)
+        self.fc = nn.Linear(hidden_dim, 1)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        embedded = self.embedding(x)
+        lstm_out, (hidden, cell) = self.lstm(embedded)
+        last_hidden = hidden[-1, :, :]
+        out = self.fc(last_hidden)
+        return self.sigmoid(out)
 
 def train_gbt_model():
     data_path = os.path.join(os.path.dirname(__file__), 'training_data.csv')

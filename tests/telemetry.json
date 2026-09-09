@@ -1,1 +1,1 @@
-{"pkts_per_sec": 3600, "mbps": 24.8, "active_flows": 164, "latency_ms": 1.18, "diode_mode": "PASSIVE RX ONLY (Tx Physically Disabled)", "status": "IDLE_BASELINE", "updated_at": 1788905771.360864}
+{"pkts_per_sec": 6241, "mbps": 17.8, "active_flows": 300, "latency_ms": 0.45, "diode_mode": "PASSIVE RX ONLY (Tx Physically Disabled)", "status": "IDLE_BASELINE", "updated_at": 1788916702.3725216}

@@ -1,165 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Threat-Detect Unidirectional Dashboard</title>
-    <link rel="stylesheet" href="style.css?v=nocache4">
-    <!-- Chart.js for graphs -->
+    <title>Threat-Detect NOC Console</title>
+    <link rel="stylesheet" href="style.css?v=nocache5">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-    <div class="dashboard-container">
-        <header>
+    <div class="noc-container">
+        <!-- Header & Controls -->
+        <header class="noc-header">
             <div class="logo">
-                <span class="icon">🛡️</span> ThreatDetect <span class="highlight">Unidirectional</span>
+                <span class="icon">🛡️</span> THREAT_DETECT <span class="highlight">NOC_CONSOLE</span>
             </div>
+            
             <div class="controls">
-                <select id="select-scenario" class="scenario-select" title="Choose Attack Profile">
-                    <option value="random">🎲 Random Dynamic Threat Mix</option>
-                    <option value="massive_ddos">💥 Massive DDoS (Thousands of alerts, 0 C2)</option>
-                    <option value="stealth_c2_exfil">🕵️ Stealthy C2 & DNS Exfil (0 DDoS)</option>
-                    <option value="recon_storm">🔍 Reconnaissance Scans (0 DDoS, 0 C2)</option>
-                    <option value="quiet_hours">🕊️ Calm Baseline (Near 0 threats)</option>
-                    <option value="coordinated_campaign">⚡ Coordinated Multi-Vector Attack</option>
+                <select id="select-scenario" class="noc-select" title="Choose Attack Profile">
+                    <option value="random">Random Dynamic Threat Mix</option>
+                    <option value="massive_ddos">Massive DDoS</option>
+                    <option value="stealth_c2_exfil">Stealthy C2 & DNS Exfil</option>
+                    <option value="recon_storm">Reconnaissance Scans</option>
+                    <option value="quiet_hours">Calm Baseline</option>
+                    <option value="coordinated_campaign">Coordinated Multi-Vector Attack</option>
                 </select>
-                <div class="duration-control-wrapper">
-                    <select id="select-duration" class="duration-select" title="Set Replay Duration Period">
-                        <option value="20" selected>⏱️ 20 Seconds</option>
-                        <option value="60">⏱️ 1 Minute</option>
-                        <option value="180">⏱️ 3 Minutes</option>
-                        <option value="300">⏱️ 5 Minutes</option>
-                        <option value="600">⏱️ 10 Minutes</option>
-                        <option value="900">⏱️ 15 Minutes</option>
-                        <option value="custom">⏱️ Custom...</option>
-                    </select>
-                    <input type="number" id="input-custom-duration" class="custom-duration-input hidden" min="5" max="3600" value="20" placeholder="Secs" title="Custom duration in seconds">
-                </div>
-                <span id="status-indicator" class="status idle">Idle</span>
-                <button id="btn-replay" class="btn primary" title="Start live traffic simulation">▶ Start Live Demo Replay</button>
-                <button id="btn-stop-replay" class="btn danger" disabled title="Immediately stop current live simulation">⏹ Stop Replay</button>
-                <span id="countdown-timer" class="countdown-badge hidden" title="Time remaining for replay">
-                    <span class="timer-icon">⏳</span> <span id="timer-display">00:20</span>
+                
+                <select id="select-duration" class="noc-select" title="Set Replay Duration">
+                    <option value="20" selected>20 Secs</option>
+                    <option value="60">1 Min</option>
+                    <option value="180">3 Mins</option>
+                    <option value="300">5 Mins</option>
+                    <option value="600">10 Mins</option>
+                    <option value="custom">Custom...</option>
+                </select>
+                <input type="number" id="input-custom-duration" class="noc-input hidden" min="5" max="3600" value="20" placeholder="Secs">
+                
+                <span id="status-indicator" class="status-indicator idle">IDLE (AIR-GAPPED)</span>
+                
+                <button id="btn-replay" class="noc-btn primary">▶ START</button>
+                <button id="btn-stop-replay" class="noc-btn danger" disabled>⏹ STOP</button>
+                <button id="btn-config" class="noc-btn secondary">⚙️ CONFIG</button>
+
+                <span id="countdown-timer" class="countdown hidden">
+                    ⏳ <span id="timer-display">00:20</span>
                 </span>
             </div>
         </header>
 
-        <!-- Real-Time Telemetry & Data Diode Enclave Gauge (Constraint D) -->
-        <div class="telemetry-banner glass">
-            <div class="telemetry-card">
-                <div class="telemetry-icon">⚡</div>
-                <div class="telemetry-info">
-                    <span class="telemetry-label">Ingestion Rate</span>
-                    <span class="telemetry-value" id="telem-pps">0 pkts/s</span>
-                </div>
-            </div>
-            <div class="telemetry-card">
-                <div class="telemetry-icon">📡</div>
-                <div class="telemetry-info">
-                    <span class="telemetry-label">Sustained Throughput</span>
-                    <span class="telemetry-value" id="telem-mbps">0.0 Mbps</span>
-                </div>
-            </div>
-            <div class="telemetry-card">
-                <div class="telemetry-icon">🔀</div>
-                <div class="telemetry-info">
-                    <span class="telemetry-label">Active Monitored Flows</span>
-                    <span class="telemetry-value" id="telem-flows">0 flows</span>
-                </div>
-            </div>
-            <div class="telemetry-card">
-                <div class="telemetry-icon">⏱️</div>
-                <div class="telemetry-info">
-                    <span class="telemetry-label">Bounded Ingest Latency</span>
-                    <span class="telemetry-value text-accent" id="telem-latency">0.0 ms</span>
-                </div>
-            </div>
-            <div class="telemetry-card diode-card">
-                <div class="diode-status-indicator">
-                    <span class="diode-pulse-dot"></span>
-                </div>
-                <div class="telemetry-info">
-                    <span class="telemetry-label">Data Diode Security</span>
-                    <span class="telemetry-value text-success" id="telem-diode">PASSIVE RX (Tx OFF)</span>
-                </div>
-            </div>
-        </div>
+        <!-- Main Layout Grid -->
+        <main class="noc-grid">
+            
+            <!-- Column 1: Overview & Top Talkers -->
+            <div class="noc-col col-sidebar">
+                <section class="noc-panel">
+                    <h2 class="panel-title">NETWORK OVERVIEW</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-label">INGESTION RATE</span>
+                            <span class="metric-value" id="telem-pps">0 pkts/s</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">THROUGHPUT</span>
+                            <span class="metric-value" id="telem-mbps">0.0 Mbps</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">ACTIVE FLOWS</span>
+                            <span class="metric-value" id="telem-flows">0</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">LATENCY</span>
+                            <span class="metric-value text-accent" id="telem-latency">0.0 ms</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">DATA DIODE</span>
+                            <span class="metric-value text-success" id="telem-diode">PASSIVE RX</span>
+                        </div>
+                    </div>
+                </section>
 
-        <main>
-            <div class="top-panels">
-                <div class="panel glass">
-                    <h2>Alerts by Threat Class</h2>
+                <section class="noc-panel flex-grow">
+                    <h2 class="panel-title">THREAT SUMMARY</h2>
                     <div class="chart-container">
                         <canvas id="classChart"></canvas>
                     </div>
-                </div>
-                <div class="panel glass">
-                    <h2>Top Talkers (Source IPs)</h2>
+                </section>
+
+                <section class="noc-panel">
+                    <h2 class="panel-title">TOP TALKERS (SRC IP)</h2>
                     <ul id="top-talkers-list" class="talkers-list">
                         <!-- Populated by JS -->
                     </ul>
-                </div>
+                </section>
             </div>
 
-            <div class="main-panel glass">
-                <div class="panel-header">
-                    <h2>Recent Alerts</h2>
-                    <div class="filters">
-                        <select id="filter-severity">
-                            <option value="">All Severities</option>
-                            <option value="CRITICAL">Critical</option>
-                            <option value="HIGH">High</option>
-                            <option value="MEDIUM">Medium</option>
-                            <option value="LOW">Low</option>
-                        </select>
+            <!-- Column 2: Traffic Charts & Live Events -->
+            <div class="noc-col col-main">
+                <section class="noc-panel traffic-panel">
+                    <h2 class="panel-title">TRAFFIC MONITORING (LIVE)</h2>
+                    <div class="chart-container-large">
+                        <canvas id="trafficChart"></canvas>
                     </div>
-                </div>
-                <div class="table-container">
-                    <table id="alerts-table">
-                        <thead>
-                            <tr>
-                                <th>Timestamp</th>
-                                <th>Threat Class</th>
-                                <th>Severity</th>
-                                <th>Confidence</th>
-                                <th>Source</th>
-                                <th>Destination</th>
-                            </tr>
-                        </thead>
-                        <tbody id="alerts-tbody">
-                            <!-- Populated by JS -->
-                        </tbody>
-                    </table>
-                </div>
+                </section>
+
+                <section class="noc-panel event-panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">LIVE EVENT STREAM</h2>
+                        <div class="filters">
+                            <label for="filter-severity">MIN SEVERITY:</label>
+                            <select id="filter-severity" class="noc-select small">
+                                <option value="">ALL</option>
+                                <option value="CRITICAL">CRITICAL</option>
+                                <option value="HIGH">HIGH</option>
+                                <option value="MEDIUM">MEDIUM</option>
+                                <option value="LOW">LOW</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="noc-table" id="event-table">
+                            <thead>
+                                <tr>
+                                    <th width="15%">TIMESTAMP</th>
+                                    <th width="15%">SRC IP</th>
+                                    <th width="15%">DST IP</th>
+                                    <th width="10%">PROTO</th>
+                                    <th width="25%">THREAT TYPE</th>
+                                    <th width="10%">SEVERITY</th>
+                                    <th width="10%">STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="alerts-tbody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </div>
+            
         </main>
     </div>
 
-    <!-- Modal for Drilldown -->
+    <!-- Notification Toasts Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Configuration Modal -->
+    <div id="config-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>NOTIFICATION SETTINGS</h2>
+                <span class="close-btn" id="close-config">&times;</span>
+            </div>
+            <div class="modal-body form-group">
+                <label class="setting-row">
+                    <span>Notification Threshold (Detections)</span>
+                    <input type="number" id="input-threshold" class="noc-input" min="1" step="100" value="1000">
+                </label>
+                <label class="setting-row">
+                    <span>In-App Notifications</span>
+                    <input type="checkbox" id="check-inapp" checked>
+                </label>
+                <label class="setting-row">
+                    <span>OS / Desktop Notifications</span>
+                    <input type="checkbox" id="check-os">
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-save-config" class="noc-btn primary">SAVE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drilldown Modal -->
     <div id="drilldown-modal" class="modal hidden">
-        <div class="modal-content glass">
-            <span class="close-btn">&times;</span>
-            <h2 id="modal-title">Alert Details</h2>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">ALERT DETAILS</h2>
+                <span class="close-btn" id="close-drilldown">&times;</span>
+            </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <h3>Explanation</h3>
+                    <h3>EXPLANATION</h3>
                     <p id="modal-explanation" class="code-block"></p>
                 </div>
                 <div class="modal-section">
-                    <h3>Features</h3>
+                    <h3>FEATURES</h3>
                     <pre id="modal-features" class="code-block"></pre>
                 </div>
                 <div class="modal-section">
-                    <h3>Correlated Alerts</h3>
+                    <h3>CORRELATED ALERTS</h3>
                     <ul id="modal-related"></ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="app.js?v=nocache4"></script>
+    <script src="app.js?v=nocache5"></script>
 </body>
-
 </html>
