@@ -10,6 +10,7 @@ fastapi
 uvicorn
 matplotlib
 httpx
+requests
 
 # Phase 2: Kafka transport
 confluent-kafka>=2.3.0

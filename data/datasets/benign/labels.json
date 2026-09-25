@@ -1,0 +1,327 @@
+{
+  "attack": "benign",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.744943,
+      "flow": {
+        "src_ip": "192.168.0.183",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21876,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331786.744943,
+      "flow": {
+        "src_ip": "192.168.0.165",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48291,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTPS connection stream"
+    },
+    {
+      "timestamp": 1790331787.744943,
+      "flow": {
+        "src_ip": "192.168.0.249",
+        "dst_ip": "127.0.0.1",
+        "src_port": 23325,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331788.744943,
+      "flow": {
+        "src_ip": "192.168.0.160",
+        "dst_ip": "127.0.0.1",
+        "src_port": 3304,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331789.744943,
+      "flow": {
+        "src_ip": "192.168.0.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38218,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTPS connection stream"
+    },
+    {
+      "timestamp": 1790331790.744943,
+      "flow": {
+        "src_ip": "192.168.0.98",
+        "dst_ip": "127.0.0.1",
+        "src_port": 22926,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331791.744943,
+      "flow": {
+        "src_ip": "192.168.0.156",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24103,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331792.744943,
+      "flow": {
+        "src_ip": "192.168.0.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24388,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTPS connection stream"
+    },
+    {
+      "timestamp": 1790331793.744943,
+      "flow": {
+        "src_ip": "192.168.0.248",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55588,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331794.744943,
+      "flow": {
+        "src_ip": "192.168.0.211",
+        "dst_ip": "127.0.0.1",
+        "src_port": 44459,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331795.744943,
+      "flow": {
+        "src_ip": "192.168.0.72",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16369,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331796.744943,
+      "flow": {
+        "src_ip": "192.168.0.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 9708,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTPS connection stream"
+    },
+    {
+      "timestamp": 1790331797.744943,
+      "flow": {
+        "src_ip": "192.168.0.75",
+        "dst_ip": "127.0.0.1",
+        "src_port": 42026,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331798.744943,
+      "flow": {
+        "src_ip": "192.168.0.82",
+        "dst_ip": "127.0.0.1",
+        "src_port": 4284,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP connection stream"
+    },
+    {
+      "timestamp": 1790331799.744943,
+      "flow": {
+        "src_ip": "192.168.0.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21870,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331800.744943,
+      "flow": {
+        "src_ip": "192.168.0.83",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59672,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    },
+    {
+      "timestamp": 1790331801.744943,
+      "flow": {
+        "src_ip": "192.168.0.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 29691,
+        "dst_port": 8080,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP-ALT connection stream"
+    },
+    {
+      "timestamp": 1790331802.744943,
+      "flow": {
+        "src_ip": "192.168.0.49",
+        "dst_ip": "127.0.0.1",
+        "src_port": 9958,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTP connection stream"
+    },
+    {
+      "timestamp": 1790331803.744943,
+      "flow": {
+        "src_ip": "192.168.0.108",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10435,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign HTTPS connection stream"
+    },
+    {
+      "timestamp": 1790331804.744943,
+      "flow": {
+        "src_ip": "192.168.0.119",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45754,
+        "dst_port": 22,
+        "protocol": "TCP"
+      },
+      "attack_family": "BENIGN",
+      "severity": "LOW",
+      "confidence": 0.1,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Benign SSH connection stream"
+    }
+  ]
+}

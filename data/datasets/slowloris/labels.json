@@ -1,0 +1,4007 @@
+{
+  "attack": "slowloris",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.7062001,
+      "flow": {
+        "src_ip": "192.168.4.214",
+        "dst_ip": "127.0.0.1",
+        "src_port": 41224,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331785.8062,
+      "flow": {
+        "src_ip": "192.168.5.145",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8905,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331785.9062002,
+      "flow": {
+        "src_ip": "192.168.3.240",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63440,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.0062,
+      "flow": {
+        "src_ip": "192.168.5.76",
+        "dst_ip": "127.0.0.1",
+        "src_port": 43152,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.1062002,
+      "flow": {
+        "src_ip": "192.168.3.227",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38307,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.2062001,
+      "flow": {
+        "src_ip": "192.168.4.190",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20476,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.3062,
+      "flow": {
+        "src_ip": "192.168.5.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34001,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.4062002,
+      "flow": {
+        "src_ip": "192.168.0.116",
+        "dst_ip": "127.0.0.1",
+        "src_port": 6102,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.5062,
+      "flow": {
+        "src_ip": "192.168.4.213",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38953,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.6062002,
+      "flow": {
+        "src_ip": "192.168.5.198",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60855,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.7062001,
+      "flow": {
+        "src_ip": "192.168.5.238",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54575,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.8062,
+      "flow": {
+        "src_ip": "192.168.1.238",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16706,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331786.9062002,
+      "flow": {
+        "src_ip": "192.168.2.217",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10154,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.0062,
+      "flow": {
+        "src_ip": "192.168.5.26",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15744,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.1062002,
+      "flow": {
+        "src_ip": "192.168.0.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21015,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.2062001,
+      "flow": {
+        "src_ip": "192.168.3.12",
+        "dst_ip": "127.0.0.1",
+        "src_port": 42930,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.3062,
+      "flow": {
+        "src_ip": "192.168.4.30",
+        "dst_ip": "127.0.0.1",
+        "src_port": 43687,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.4062002,
+      "flow": {
+        "src_ip": "192.168.2.236",
+        "dst_ip": "127.0.0.1",
+        "src_port": 46519,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.5062,
+      "flow": {
+        "src_ip": "192.168.2.248",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34951,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.6062002,
+      "flow": {
+        "src_ip": "192.168.4.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 5857,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.7062001,
+      "flow": {
+        "src_ip": "192.168.4.214",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57492,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.8062,
+      "flow": {
+        "src_ip": "192.168.4.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 40369,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331787.9062002,
+      "flow": {
+        "src_ip": "192.168.2.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 5578,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.0062,
+      "flow": {
+        "src_ip": "192.168.2.51",
+        "dst_ip": "127.0.0.1",
+        "src_port": 30203,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.1062002,
+      "flow": {
+        "src_ip": "192.168.4.190",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12129,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.2062001,
+      "flow": {
+        "src_ip": "192.168.2.166",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8728,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.3062,
+      "flow": {
+        "src_ip": "192.168.4.241",
+        "dst_ip": "127.0.0.1",
+        "src_port": 6947,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.4062002,
+      "flow": {
+        "src_ip": "192.168.5.147",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12276,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.5062,
+      "flow": {
+        "src_ip": "192.168.1.138",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33637,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.6062002,
+      "flow": {
+        "src_ip": "192.168.0.245",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31119,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.7062001,
+      "flow": {
+        "src_ip": "192.168.2.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35162,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.8062,
+      "flow": {
+        "src_ip": "192.168.3.241",
+        "dst_ip": "127.0.0.1",
+        "src_port": 9740,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331788.9062002,
+      "flow": {
+        "src_ip": "192.168.2.106",
+        "dst_ip": "127.0.0.1",
+        "src_port": 29545,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.0062,
+      "flow": {
+        "src_ip": "192.168.3.70",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48182,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.1062002,
+      "flow": {
+        "src_ip": "192.168.5.216",
+        "dst_ip": "127.0.0.1",
+        "src_port": 25559,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.2062001,
+      "flow": {
+        "src_ip": "192.168.0.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20501,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.3062,
+      "flow": {
+        "src_ip": "192.168.2.61",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12658,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.4062002,
+      "flow": {
+        "src_ip": "192.168.1.126",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55555,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.5062,
+      "flow": {
+        "src_ip": "192.168.2.196",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60859,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.6062002,
+      "flow": {
+        "src_ip": "192.168.2.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 18944,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.7062001,
+      "flow": {
+        "src_ip": "192.168.5.8",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20342,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.8062,
+      "flow": {
+        "src_ip": "192.168.1.91",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8013,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331789.9062002,
+      "flow": {
+        "src_ip": "192.168.2.92",
+        "dst_ip": "127.0.0.1",
+        "src_port": 2788,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.0062,
+      "flow": {
+        "src_ip": "192.168.1.148",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50273,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.1062002,
+      "flow": {
+        "src_ip": "192.168.5.69",
+        "dst_ip": "127.0.0.1",
+        "src_port": 17524,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.2062001,
+      "flow": {
+        "src_ip": "192.168.5.238",
+        "dst_ip": "127.0.0.1",
+        "src_port": 11236,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.3062,
+      "flow": {
+        "src_ip": "192.168.2.160",
+        "dst_ip": "127.0.0.1",
+        "src_port": 43099,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.4062002,
+      "flow": {
+        "src_ip": "192.168.5.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8529,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.5062,
+      "flow": {
+        "src_ip": "192.168.1.9",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48762,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.6062002,
+      "flow": {
+        "src_ip": "192.168.1.246",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59847,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.7062001,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10735,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.8062,
+      "flow": {
+        "src_ip": "192.168.1.192",
+        "dst_ip": "127.0.0.1",
+        "src_port": 42429,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331790.9062002,
+      "flow": {
+        "src_ip": "192.168.2.96",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8543,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.0062,
+      "flow": {
+        "src_ip": "192.168.3.162",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51301,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.1062002,
+      "flow": {
+        "src_ip": "192.168.4.122",
+        "dst_ip": "127.0.0.1",
+        "src_port": 29662,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.2062001,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61217,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.3062,
+      "flow": {
+        "src_ip": "192.168.5.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 44512,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.4062002,
+      "flow": {
+        "src_ip": "192.168.5.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35795,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.5062,
+      "flow": {
+        "src_ip": "192.168.4.56",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49695,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.6062002,
+      "flow": {
+        "src_ip": "192.168.3.117",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38019,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.7062001,
+      "flow": {
+        "src_ip": "192.168.2.20",
+        "dst_ip": "127.0.0.1",
+        "src_port": 36538,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.8062,
+      "flow": {
+        "src_ip": "192.168.4.211",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56725,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331791.9062002,
+      "flow": {
+        "src_ip": "192.168.3.83",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20423,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.0062,
+      "flow": {
+        "src_ip": "192.168.2.211",
+        "dst_ip": "127.0.0.1",
+        "src_port": 13640,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.1062002,
+      "flow": {
+        "src_ip": "192.168.0.219",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62954,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.2062001,
+      "flow": {
+        "src_ip": "192.168.2.16",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53982,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.3062,
+      "flow": {
+        "src_ip": "192.168.4.167",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33301,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.4062002,
+      "flow": {
+        "src_ip": "192.168.2.20",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24097,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.5062,
+      "flow": {
+        "src_ip": "192.168.1.229",
+        "dst_ip": "127.0.0.1",
+        "src_port": 26240,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.6062002,
+      "flow": {
+        "src_ip": "192.168.3.254",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38709,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.7062001,
+      "flow": {
+        "src_ip": "192.168.4.87",
+        "dst_ip": "127.0.0.1",
+        "src_port": 28226,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.8062,
+      "flow": {
+        "src_ip": "192.168.1.121",
+        "dst_ip": "127.0.0.1",
+        "src_port": 39455,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331792.9062002,
+      "flow": {
+        "src_ip": "192.168.2.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 25224,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.0062,
+      "flow": {
+        "src_ip": "192.168.2.199",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12691,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.1062002,
+      "flow": {
+        "src_ip": "192.168.2.131",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62175,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.2062001,
+      "flow": {
+        "src_ip": "192.168.5.1",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58865,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.3062,
+      "flow": {
+        "src_ip": "192.168.4.246",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58270,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.4062002,
+      "flow": {
+        "src_ip": "192.168.1.251",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24961,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.5062,
+      "flow": {
+        "src_ip": "192.168.1.205",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53888,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.6062002,
+      "flow": {
+        "src_ip": "192.168.0.58",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31298,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.7062001,
+      "flow": {
+        "src_ip": "192.168.0.170",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49934,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.8062,
+      "flow": {
+        "src_ip": "192.168.5.72",
+        "dst_ip": "127.0.0.1",
+        "src_port": 44035,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331793.9062002,
+      "flow": {
+        "src_ip": "192.168.2.146",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12286,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.0062,
+      "flow": {
+        "src_ip": "192.168.3.81",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54673,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.1062002,
+      "flow": {
+        "src_ip": "192.168.4.237",
+        "dst_ip": "127.0.0.1",
+        "src_port": 26605,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.2062001,
+      "flow": {
+        "src_ip": "192.168.2.130",
+        "dst_ip": "127.0.0.1",
+        "src_port": 25155,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.3062,
+      "flow": {
+        "src_ip": "192.168.1.11",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50692,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.4062002,
+      "flow": {
+        "src_ip": "192.168.0.246",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48827,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.5062,
+      "flow": {
+        "src_ip": "192.168.3.109",
+        "dst_ip": "127.0.0.1",
+        "src_port": 1621,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.6062002,
+      "flow": {
+        "src_ip": "192.168.5.144",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54234,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.7062001,
+      "flow": {
+        "src_ip": "192.168.4.42",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50166,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.8062,
+      "flow": {
+        "src_ip": "192.168.2.28",
+        "dst_ip": "127.0.0.1",
+        "src_port": 25596,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331794.9062002,
+      "flow": {
+        "src_ip": "192.168.0.42",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15010,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.0062,
+      "flow": {
+        "src_ip": "192.168.3.117",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34441,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.1062002,
+      "flow": {
+        "src_ip": "192.168.5.208",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60374,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.2062001,
+      "flow": {
+        "src_ip": "192.168.0.220",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20327,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.3062,
+      "flow": {
+        "src_ip": "192.168.4.164",
+        "dst_ip": "127.0.0.1",
+        "src_port": 11789,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.4062002,
+      "flow": {
+        "src_ip": "192.168.2.193",
+        "dst_ip": "127.0.0.1",
+        "src_port": 30087,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.5062,
+      "flow": {
+        "src_ip": "192.168.3.117",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45545,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.6062002,
+      "flow": {
+        "src_ip": "192.168.1.121",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49248,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.7062001,
+      "flow": {
+        "src_ip": "192.168.3.58",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16184,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.8062,
+      "flow": {
+        "src_ip": "192.168.1.131",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50521,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331795.9062002,
+      "flow": {
+        "src_ip": "192.168.0.229",
+        "dst_ip": "127.0.0.1",
+        "src_port": 3710,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.0062,
+      "flow": {
+        "src_ip": "192.168.5.250",
+        "dst_ip": "127.0.0.1",
+        "src_port": 27188,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.1062002,
+      "flow": {
+        "src_ip": "192.168.0.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10111,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.2062001,
+      "flow": {
+        "src_ip": "192.168.1.248",
+        "dst_ip": "127.0.0.1",
+        "src_port": 43045,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.3062,
+      "flow": {
+        "src_ip": "192.168.2.9",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45155,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.4062002,
+      "flow": {
+        "src_ip": "192.168.3.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15884,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.5062,
+      "flow": {
+        "src_ip": "192.168.2.155",
+        "dst_ip": "127.0.0.1",
+        "src_port": 5216,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.6062002,
+      "flow": {
+        "src_ip": "192.168.2.247",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53500,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.7062001,
+      "flow": {
+        "src_ip": "192.168.1.167",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50002,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.8062,
+      "flow": {
+        "src_ip": "192.168.5.97",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31172,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331796.9062002,
+      "flow": {
+        "src_ip": "192.168.2.166",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50497,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.0062,
+      "flow": {
+        "src_ip": "192.168.4.73",
+        "dst_ip": "127.0.0.1",
+        "src_port": 18375,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.1062002,
+      "flow": {
+        "src_ip": "192.168.4.201",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54113,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.2062001,
+      "flow": {
+        "src_ip": "192.168.3.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21168,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.3062,
+      "flow": {
+        "src_ip": "192.168.3.248",
+        "dst_ip": "127.0.0.1",
+        "src_port": 26418,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.4062002,
+      "flow": {
+        "src_ip": "192.168.2.152",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10871,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.5062,
+      "flow": {
+        "src_ip": "192.168.1.54",
+        "dst_ip": "127.0.0.1",
+        "src_port": 47015,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.6062002,
+      "flow": {
+        "src_ip": "192.168.3.109",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56960,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.7062001,
+      "flow": {
+        "src_ip": "192.168.2.104",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15587,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.8062,
+      "flow": {
+        "src_ip": "192.168.4.143",
+        "dst_ip": "127.0.0.1",
+        "src_port": 41493,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331797.9062002,
+      "flow": {
+        "src_ip": "192.168.0.42",
+        "dst_ip": "127.0.0.1",
+        "src_port": 30085,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.0062,
+      "flow": {
+        "src_ip": "192.168.5.79",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16538,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.1062002,
+      "flow": {
+        "src_ip": "192.168.1.109",
+        "dst_ip": "127.0.0.1",
+        "src_port": 22492,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.2062001,
+      "flow": {
+        "src_ip": "192.168.5.234",
+        "dst_ip": "127.0.0.1",
+        "src_port": 17629,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.3062,
+      "flow": {
+        "src_ip": "192.168.1.134",
+        "dst_ip": "127.0.0.1",
+        "src_port": 18745,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.4062002,
+      "flow": {
+        "src_ip": "192.168.0.71",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48118,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.5062,
+      "flow": {
+        "src_ip": "192.168.3.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 29828,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.6062002,
+      "flow": {
+        "src_ip": "192.168.3.250",
+        "dst_ip": "127.0.0.1",
+        "src_port": 6549,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.7062001,
+      "flow": {
+        "src_ip": "192.168.4.187",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33161,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.8062,
+      "flow": {
+        "src_ip": "192.168.1.82",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31817,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331798.9062002,
+      "flow": {
+        "src_ip": "192.168.5.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34291,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.0062,
+      "flow": {
+        "src_ip": "192.168.5.15",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35889,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.1062002,
+      "flow": {
+        "src_ip": "192.168.4.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48196,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.2062001,
+      "flow": {
+        "src_ip": "192.168.1.181",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49969,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.3062,
+      "flow": {
+        "src_ip": "192.168.2.252",
+        "dst_ip": "127.0.0.1",
+        "src_port": 23792,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.4062002,
+      "flow": {
+        "src_ip": "192.168.4.152",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56570,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.5062,
+      "flow": {
+        "src_ip": "192.168.5.102",
+        "dst_ip": "127.0.0.1",
+        "src_port": 40502,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.6062002,
+      "flow": {
+        "src_ip": "192.168.4.171",
+        "dst_ip": "127.0.0.1",
+        "src_port": 44908,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.7062001,
+      "flow": {
+        "src_ip": "192.168.2.82",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56931,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.8062,
+      "flow": {
+        "src_ip": "192.168.2.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 13106,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331799.9062002,
+      "flow": {
+        "src_ip": "192.168.1.77",
+        "dst_ip": "127.0.0.1",
+        "src_port": 39477,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.0062,
+      "flow": {
+        "src_ip": "192.168.1.89",
+        "dst_ip": "127.0.0.1",
+        "src_port": 36211,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.1062002,
+      "flow": {
+        "src_ip": "192.168.3.148",
+        "dst_ip": "127.0.0.1",
+        "src_port": 40897,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.2062001,
+      "flow": {
+        "src_ip": "192.168.4.133",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33424,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.3062,
+      "flow": {
+        "src_ip": "192.168.1.179",
+        "dst_ip": "127.0.0.1",
+        "src_port": 23973,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.4062002,
+      "flow": {
+        "src_ip": "192.168.5.90",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62926,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.5062,
+      "flow": {
+        "src_ip": "192.168.3.124",
+        "dst_ip": "127.0.0.1",
+        "src_port": 44966,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.6062002,
+      "flow": {
+        "src_ip": "192.168.2.142",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7567,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.7062001,
+      "flow": {
+        "src_ip": "192.168.2.4",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15633,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.8062,
+      "flow": {
+        "src_ip": "192.168.0.89",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55146,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331800.9062002,
+      "flow": {
+        "src_ip": "192.168.5.131",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59804,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.0062,
+      "flow": {
+        "src_ip": "192.168.1.164",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55718,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.1062002,
+      "flow": {
+        "src_ip": "192.168.2.194",
+        "dst_ip": "127.0.0.1",
+        "src_port": 12072,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.2062001,
+      "flow": {
+        "src_ip": "192.168.3.147",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31179,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.3062,
+      "flow": {
+        "src_ip": "192.168.0.193",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52417,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.4062002,
+      "flow": {
+        "src_ip": "192.168.4.142",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32506,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.5062,
+      "flow": {
+        "src_ip": "192.168.0.130",
+        "dst_ip": "127.0.0.1",
+        "src_port": 27722,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.6062002,
+      "flow": {
+        "src_ip": "192.168.2.78",
+        "dst_ip": "127.0.0.1",
+        "src_port": 14694,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.7062001,
+      "flow": {
+        "src_ip": "192.168.2.193",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55885,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.8062,
+      "flow": {
+        "src_ip": "192.168.4.237",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24826,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331801.9062002,
+      "flow": {
+        "src_ip": "192.168.2.73",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65482,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.0062,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61782,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.1062002,
+      "flow": {
+        "src_ip": "192.168.4.101",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61599,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.2062001,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45467,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.3062,
+      "flow": {
+        "src_ip": "192.168.5.129",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51552,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.4062002,
+      "flow": {
+        "src_ip": "192.168.1.82",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33222,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.5062,
+      "flow": {
+        "src_ip": "192.168.5.60",
+        "dst_ip": "127.0.0.1",
+        "src_port": 23299,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.6062002,
+      "flow": {
+        "src_ip": "192.168.2.218",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32246,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.7062001,
+      "flow": {
+        "src_ip": "192.168.4.176",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60367,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.8062,
+      "flow": {
+        "src_ip": "192.168.3.110",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10537,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331802.9062002,
+      "flow": {
+        "src_ip": "192.168.5.121",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59295,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.0062,
+      "flow": {
+        "src_ip": "192.168.5.211",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32262,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.1062002,
+      "flow": {
+        "src_ip": "192.168.2.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32077,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.2062001,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45645,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.3062,
+      "flow": {
+        "src_ip": "192.168.4.157",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38188,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.4062002,
+      "flow": {
+        "src_ip": "192.168.1.143",
+        "dst_ip": "127.0.0.1",
+        "src_port": 5636,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.5062,
+      "flow": {
+        "src_ip": "192.168.0.113",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63482,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.6062002,
+      "flow": {
+        "src_ip": "192.168.5.221",
+        "dst_ip": "127.0.0.1",
+        "src_port": 41278,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.7062001,
+      "flow": {
+        "src_ip": "192.168.2.201",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7957,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.8062,
+      "flow": {
+        "src_ip": "192.168.5.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 42524,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331803.9062002,
+      "flow": {
+        "src_ip": "192.168.5.171",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33645,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.0062,
+      "flow": {
+        "src_ip": "192.168.4.54",
+        "dst_ip": "127.0.0.1",
+        "src_port": 17423,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.1062002,
+      "flow": {
+        "src_ip": "192.168.1.104",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34331,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.2062001,
+      "flow": {
+        "src_ip": "192.168.3.223",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24792,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.3062,
+      "flow": {
+        "src_ip": "192.168.4.125",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24581,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.4062002,
+      "flow": {
+        "src_ip": "192.168.1.127",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52614,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.5062,
+      "flow": {
+        "src_ip": "192.168.4.198",
+        "dst_ip": "127.0.0.1",
+        "src_port": 33621,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.6062002,
+      "flow": {
+        "src_ip": "192.168.3.42",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54605,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.7062001,
+      "flow": {
+        "src_ip": "192.168.1.176",
+        "dst_ip": "127.0.0.1",
+        "src_port": 6639,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.8062,
+      "flow": {
+        "src_ip": "192.168.5.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48411,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331804.9062002,
+      "flow": {
+        "src_ip": "192.168.0.211",
+        "dst_ip": "127.0.0.1",
+        "src_port": 30339,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.0062,
+      "flow": {
+        "src_ip": "192.168.5.54",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10625,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.1062002,
+      "flow": {
+        "src_ip": "192.168.5.77",
+        "dst_ip": "127.0.0.1",
+        "src_port": 39527,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.2062001,
+      "flow": {
+        "src_ip": "192.168.1.153",
+        "dst_ip": "127.0.0.1",
+        "src_port": 47172,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.3062,
+      "flow": {
+        "src_ip": "192.168.1.150",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51326,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.4062002,
+      "flow": {
+        "src_ip": "192.168.0.162",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35189,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.5062,
+      "flow": {
+        "src_ip": "192.168.5.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 18839,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    },
+    {
+      "timestamp": 1790331805.6062002,
+      "flow": {
+        "src_ip": "192.168.3.23",
+        "dst_ip": "127.0.0.1",
+        "src_port": 47339,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SLOWLORIS",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "generator": "scapy_slowloris",
+      "generator_mode": "fallback",
+      "explanation": "Partial HTTP header held open for 2s to exhaust server threads",
+      "features": {
+        "connections": 200,
+        "hold_secs": 2
+      }
+    }
+  ]
+}

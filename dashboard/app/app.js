@@ -19,15 +19,21 @@ let trafficMbpsData = [];
 let notificationThreshold = 1000;
 let inAppNotifEnabled = true;
 let osNotifEnabled = false;
+let lightThemeEnabled = false;
 let notifiedThresholds = {}; // { "DDoS": 1000, "C2 Beaconing": 0, ... }
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = (window.location && window.location.origin && window.location.origin.startsWith("http")) 
+    ? `${window.location.origin}/api` 
+    : "http://127.0.0.1:8000/api";
 
 document.addEventListener("DOMContentLoaded", () => {
     initCharts();
     initConfigModal();
+    applyTheme(lightThemeEnabled); // apply saved/default theme
     fetchData();
     initSSE();
+    initDataSourceToggle();
+
 
     document.getElementById("btn-replay").addEventListener("click", triggerReplay);
     
@@ -56,9 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.getElementById("close-drilldown").addEventListener("click", closeModal);
     
-    // Heartbeat fallback poll every 5 seconds in case SSE drops
+    // Heartbeat fallback poll every 1.5s to ensure charts and stats keep moving even if SSE reconnects
     if (pollInterval) clearInterval(pollInterval);
-    pollInterval = setInterval(fetchSummary, 5000);
+    pollInterval = setInterval(() => {
+        fetchSummary();
+        fetchTelemetry();
+    }, 1500);
 });
 
 /* --- CONFIG & NOTIFICATIONS --- */
@@ -72,13 +81,24 @@ function initConfigModal() {
     const inputThresh = document.getElementById("input-threshold");
     const checkInApp = document.getElementById("check-inapp");
     const checkOS = document.getElementById("check-os");
+    const checkTheme = document.getElementById("check-light-theme");
 
     btnConfig.addEventListener("click", () => {
         inputThresh.value = notificationThreshold;
         checkInApp.checked = inAppNotifEnabled;
         checkOS.checked = osNotifEnabled;
+        if (checkTheme) checkTheme.checked = lightThemeEnabled;
+        _updateDsButtons();
         modal.classList.remove("hidden");
     });
+
+    // Live toggle — apply theme immediately on checkbox change
+    if (checkTheme) {
+        checkTheme.addEventListener("change", () => {
+            lightThemeEnabled = checkTheme.checked;
+            applyTheme(lightThemeEnabled);
+        });
+    }
 
     closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
 
@@ -109,7 +129,97 @@ function initConfigModal() {
     });
 }
 
+/**
+ * Apply dark (false) or light (true) theme to the document root
+ * and update Chart.js chart colors to match the active CSS variables.
+ */
+function applyTheme(isLight) {
+    if (isLight) {
+        document.documentElement.setAttribute("data-theme", "light");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+    }
+    // Re-colour charts using the now-active CSS variables
+    recolourCharts();
+}
+
+/**
+ * Read active CSS custom properties and push updated colours into Chart.js datasets.
+ */
+function recolourCharts() {
+    const style = getComputedStyle(document.documentElement);
+    const ppsLine  = style.getPropertyValue("--chart-pps-line").trim();
+    const ppsFill  = style.getPropertyValue("--chart-pps-fill").trim();
+    const mbpsLine = style.getPropertyValue("--chart-mbps-line").trim();
+    const mbpsFill = style.getPropertyValue("--chart-mbps-fill").trim();
+    const gridCol  = style.getPropertyValue("--chart-grid").trim();
+    const tickCol  = style.getPropertyValue("--chart-tick").trim();
+    const tickPps  = style.getPropertyValue("--chart-tick-pps").trim();
+    const tickMbps = style.getPropertyValue("--chart-tick-mbps").trim();
+
+    if (trafficChartInstance) {
+        const ds = trafficChartInstance.data.datasets;
+        if (ds[0]) { ds[0].borderColor = ppsLine;  ds[0].backgroundColor = ppsFill; }
+        if (ds[1]) { ds[1].borderColor = mbpsLine; ds[1].backgroundColor = mbpsFill; }
+        const sc = trafficChartInstance.options.scales;
+        if (sc.x)    { sc.x.grid.color = gridCol;    sc.x.ticks.color = tickCol; }
+        if (sc.yPps)  { sc.yPps.grid.color = gridCol;  sc.yPps.ticks.color = tickPps; }
+        if (sc.yMbps) { sc.yMbps.grid.color = gridCol; sc.yMbps.ticks.color = tickMbps; }
+        trafficChartInstance.update('none');
+    }
+}
+
+/* --- DATA SOURCE TOGGLE --- */
+let currentDataSourceMode = "simulated";  // "simulated" | "dataset"
+
+function initDataSourceToggle() {
+    const btnSimulated = document.getElementById("ds-btn-simulated");
+    const btnDataset   = document.getElementById("ds-btn-dataset");
+    if (!btnSimulated || !btnDataset) return;
+
+    // Sync initial state from server
+    fetch(`${API_BASE}/datasource/mode`)
+        .then(r => r.json())
+        .then(d => {
+            currentDataSourceMode = d.mode || "simulated";
+            _updateDsButtons();
+            if (!d.dataset_available) {
+                btnDataset.title = "Dataset Replay unavailable (datasource/ module not found)";
+                btnDataset.style.opacity = "0.4";
+                btnDataset.style.cursor  = "not-allowed";
+            }
+        })
+        .catch(() => {});
+
+    btnSimulated.addEventListener("click", () => _setDataSource("simulated"));
+    btnDataset.addEventListener("click",   () => _setDataSource("dataset"));
+}
+
+function _setDataSource(mode) {
+    fetch(`${API_BASE}/datasource/mode?mode=${mode}`, { method: "POST" })
+        .then(r => r.json())
+        .then(d => {
+            currentDataSourceMode = d.mode;
+            _updateDsButtons();
+            showToast(
+                mode === "dataset" ? "Dataset Replay" : "Simulated",
+                `Data source switched to ${mode === "dataset" ? "DATASET REPLAY (labeled ground-truth)": "SIMULATED (ONNX inference)"}`,
+                mode === "dataset" ? "warning" : "info"
+            );
+        })
+        .catch(() => {});
+}
+
+function _updateDsButtons() {
+    const btnSimulated = document.getElementById("ds-btn-simulated");
+    const btnDataset   = document.getElementById("ds-btn-dataset");
+    if (!btnSimulated || !btnDataset) return;
+    btnSimulated.classList.toggle("active", currentDataSourceMode === "simulated");
+    btnDataset.classList.toggle("active",   currentDataSourceMode === "dataset");
+}
+
 function checkAndTriggerNotification(threatClass, currentCount) {
+
     if (!notificationThreshold || notificationThreshold <= 0) return;
 
     const lastNotified = notifiedThresholds[threatClass] || 0;
@@ -172,9 +282,9 @@ function resetSessionState() {
     talkerCounts = {};
     notifiedThresholds = {}; // Reset thresholds on new replay
     
-    trafficTimeLabels = [];
-    trafficPpsData = [];
-    trafficMbpsData = [];
+    trafficTimeLabels.length = 0;
+    trafficPpsData.length = 0;
+    trafficMbpsData.length = 0;
     
     document.getElementById("alerts-tbody").innerHTML = "";
     document.getElementById("top-talkers-list").innerHTML = "";
@@ -216,7 +326,11 @@ function initSSE() {
     });
 
     sseSource.onerror = () => {
-        // Background reconnect
+        if (sseSource) {
+            sseSource.close();
+            sseSource = null;
+        }
+        setTimeout(initSSE, 2000);
     };
 }
 
@@ -351,10 +465,33 @@ function appendTrafficChartData(data) {
         trafficMbpsData.shift();
     }
     
+    trafficChartInstance.data.labels = trafficTimeLabels;
+    trafficChartInstance.data.datasets[0].data = trafficPpsData;
+    trafficChartInstance.data.datasets[1].data = trafficMbpsData;
     trafficChartInstance.update();
 }
 
 /* --- EVENT STREAM & ALERTS --- */
+
+let pendingChartUpdate = false;
+let pendingTalkersUpdate = false;
+
+function scheduleUIUpdates() {
+    if (!pendingChartUpdate) {
+        pendingChartUpdate = true;
+        requestAnimationFrame(() => {
+            updateClassChart();
+            pendingChartUpdate = false;
+        });
+    }
+    if (!pendingTalkersUpdate) {
+        pendingTalkersUpdate = true;
+        setTimeout(() => {
+            updateTopTalkersUI();
+            pendingTalkersUpdate = false;
+        }, 200);
+    }
+}
 
 function handleIncomingLiveAlert(alert) {
     if (seenAlertIds.has(alert.alert_id)) return;
@@ -371,15 +508,15 @@ function handleIncomingLiveAlert(alert) {
     // Incremental Data Updates
     const tc = alert.threat_class;
     classCounts[tc] = (classCounts[tc] || 0) + 1;
-    updateClassChart();
     
     checkAndTriggerNotification(tc, classCounts[tc]);
 
     const src = alert.flow_id.src_ip;
     if (src) {
         talkerCounts[src] = (talkerCounts[src] || 0) + 1;
-        updateTopTalkersUI();
     }
+
+    scheduleUIUpdates();
 }
 
 function appendAlertToTable(alert) {
@@ -431,6 +568,9 @@ function updateClassChart() {
 
 function updateTrafficChart() {
     if (!trafficChartInstance) return;
+    trafficChartInstance.data.labels = trafficTimeLabels;
+    trafficChartInstance.data.datasets[0].data = trafficPpsData;
+    trafficChartInstance.data.datasets[1].data = trafficMbpsData;
     trafficChartInstance.update();
 }
 
@@ -443,8 +583,11 @@ function updateTopTalkersUI() {
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10);
         
+    const maxCount = sorted.length > 0 ? Math.max(sorted[0][1], 1) : 1;
+
     ul.innerHTML = sorted.map(([ip, count]) => {
-        return `<li><span>${ip}</span> <strong>${count.toLocaleString()}</strong></li>`;
+        const pct = ((count / maxCount) * 100).toFixed(1);
+        return `<li style="--bar-pct: ${pct}%;"><span>${ip}</span> <strong>${count.toLocaleString()}</strong></li>`;
     }).join("");
 }
 
@@ -467,6 +610,9 @@ async function fetchTelemetry() {
         const res = await fetch(`${API_BASE}/stats/telemetry`);
         const data = await res.json();
         updateTelemetryUI(data);
+        if (!sseSource || sseSource.readyState !== EventSource.OPEN) {
+            appendTrafficChartData(data);
+        }
     } catch (e) {
         // silent fail
     }
@@ -503,12 +649,10 @@ async function fetchSummary() {
         updateClassChart();
 
         // Sync top talkers
-        const ul = document.getElementById("top-talkers-list");
-        ul.innerHTML = "";
         data.top_talkers.forEach(t => {
             talkerCounts[t.ip] = t.count;
-            ul.innerHTML += `<li><span>${t.ip}</span> <strong>${t.count.toLocaleString()}</strong></li>`;
         });
+        updateTopTalkersUI();
     } catch (e) {
         console.error("Fetch summary failed", e);
     }
@@ -589,8 +733,9 @@ async function triggerReplay() {
     replayCountdownTimer = setInterval(() => {
         replaySecondsRemaining -= 1;
         if (replaySecondsRemaining <= 0) {
-            resetReplayUI("COMPLETED");
-            fetchData();
+            clearInterval(replayCountdownTimer);
+            replayCountdownTimer = null;
+            stopReplay();
         } else {
             if (timerDisplay) {
                 timerDisplay.textContent = formatCountdownTime(replaySecondsRemaining);
@@ -599,14 +744,15 @@ async function triggerReplay() {
     }, 1000);
 
     try {
-        const url = `${API_BASE}/replay?scenario=${encodeURIComponent(selectedScenario)}&duration=${encodeURIComponent(duration)}`;
+        const url = `${API_BASE}/replay?scenario=${encodeURIComponent(selectedScenario)}&duration=${encodeURIComponent(duration)}&mode=${encodeURIComponent(currentDataSourceMode)}`;
         const res = await fetch(url, { method: "POST" });
         const data = await res.json();
         
+        const modeTag = currentDataSourceMode === "dataset" ? " [DATASET]" : "";
         if (data.scenario) {
-            ind.textContent = `STREAMING: ${data.scenario.toUpperCase()}`;
+            ind.textContent = `STREAMING${modeTag}: ${data.scenario.toUpperCase()}`;
         } else {
-            ind.textContent = "STREAMING INGRESS";
+            ind.textContent = currentDataSourceMode === "dataset" ? "STREAMING [DATASET]" : "STREAMING INGRESS";
         }
 
         initSSE(); // Reconnect SSE

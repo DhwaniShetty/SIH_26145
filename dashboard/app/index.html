@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threat-Detect NOC Console</title>
-    <link rel="stylesheet" href="style.css?v=nocache5">
+    <link rel="stylesheet" href="style.css?v=nocache7">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -79,7 +79,10 @@
                 </section>
 
                 <section class="noc-panel flex-grow">
-                    <h2 class="panel-title">THREAT SUMMARY</h2>
+                    <div class="panel-header-with-sub">
+                        <h2 class="panel-title">THREAT SUMMARY</h2>
+                        <div class="panel-subtitle">Colors indicate threat category, not severity</div>
+                    </div>
                     <div class="chart-container">
                         <canvas id="classChart"></canvas>
                     </div>
@@ -163,6 +166,24 @@
                     <span>OS / Desktop Notifications</span>
                     <input type="checkbox" id="check-os">
                 </label>
+                <div class="setting-row">
+                    <span>Interface Theme</span>
+                    <div class="theme-switch-wrap">
+                        <span>DARK</span>
+                        <label class="theme-switch" title="Toggle light/dark mode">
+                            <input type="checkbox" id="check-light-theme">
+                            <span class="theme-switch-slider"></span>
+                        </label>
+                        <span>LIGHT</span>
+                    </div>
+                </div>
+                <div class="setting-row">
+                    <span>Data Source</span>
+                    <div class="datasource-toggle" id="datasource-toggle">
+                        <button class="ds-btn active" id="ds-btn-simulated" data-mode="simulated" title="ONNX inference on synthetic PCAPs">SIMULATED</button>
+                        <button class="ds-btn" id="ds-btn-dataset" data-mode="dataset" title="Stream labeled ground-truth dataset records">DATASET REPLAY</button>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button id="btn-save-config" class="noc-btn primary">SAVE</button>
@@ -194,6 +215,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=nocache5"></script>
+    <script src="app.js?v=nocache7"></script>
 </body>
 </html>

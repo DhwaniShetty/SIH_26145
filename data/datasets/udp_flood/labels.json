@@ -1,0 +1,647 @@
+{
+  "attack": "udp_flood",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.6930535,
+      "flow": {
+        "src_ip": "10.197.97.134",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62870,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7010534,
+      "flow": {
+        "src_ip": "10.134.33.238",
+        "dst_ip": "127.0.0.1",
+        "src_port": 14927,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7090535,
+      "flow": {
+        "src_ip": "10.167.172.181",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35107,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7170534,
+      "flow": {
+        "src_ip": "10.245.249.187",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32748,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7250535,
+      "flow": {
+        "src_ip": "10.70.123.92",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59757,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7330534,
+      "flow": {
+        "src_ip": "10.222.126.8",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56575,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7410536,
+      "flow": {
+        "src_ip": "10.9.146.3",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7588,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7490535,
+      "flow": {
+        "src_ip": "10.125.122.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53375,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7570534,
+      "flow": {
+        "src_ip": "10.187.134.167",
+        "dst_ip": "127.0.0.1",
+        "src_port": 9238,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7650535,
+      "flow": {
+        "src_ip": "10.202.231.201",
+        "dst_ip": "127.0.0.1",
+        "src_port": 1776,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7730534,
+      "flow": {
+        "src_ip": "10.35.9.157",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7201,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7810535,
+      "flow": {
+        "src_ip": "10.189.8.219",
+        "dst_ip": "127.0.0.1",
+        "src_port": 32277,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7890534,
+      "flow": {
+        "src_ip": "10.162.189.79",
+        "dst_ip": "127.0.0.1",
+        "src_port": 20573,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.7970536,
+      "flow": {
+        "src_ip": "10.98.146.73",
+        "dst_ip": "127.0.0.1",
+        "src_port": 8846,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8050535,
+      "flow": {
+        "src_ip": "10.38.253.233",
+        "dst_ip": "127.0.0.1",
+        "src_port": 6341,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8130534,
+      "flow": {
+        "src_ip": "10.227.169.201",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51124,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8210535,
+      "flow": {
+        "src_ip": "10.197.235.215",
+        "dst_ip": "127.0.0.1",
+        "src_port": 17744,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8290534,
+      "flow": {
+        "src_ip": "10.166.68.253",
+        "dst_ip": "127.0.0.1",
+        "src_port": 11467,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8370535,
+      "flow": {
+        "src_ip": "10.242.60.133",
+        "dst_ip": "127.0.0.1",
+        "src_port": 40881,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8450534,
+      "flow": {
+        "src_ip": "10.143.230.74",
+        "dst_ip": "127.0.0.1",
+        "src_port": 28192,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8530536,
+      "flow": {
+        "src_ip": "10.28.120.51",
+        "dst_ip": "127.0.0.1",
+        "src_port": 47586,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8610535,
+      "flow": {
+        "src_ip": "10.76.186.137",
+        "dst_ip": "127.0.0.1",
+        "src_port": 30410,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8690536,
+      "flow": {
+        "src_ip": "10.194.90.253",
+        "dst_ip": "127.0.0.1",
+        "src_port": 17754,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8770535,
+      "flow": {
+        "src_ip": "10.16.119.1",
+        "dst_ip": "127.0.0.1",
+        "src_port": 46400,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8850534,
+      "flow": {
+        "src_ip": "10.101.125.236",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63105,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.8930535,
+      "flow": {
+        "src_ip": "10.5.187.66",
+        "dst_ip": "127.0.0.1",
+        "src_port": 37958,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9010534,
+      "flow": {
+        "src_ip": "10.140.6.208",
+        "dst_ip": "127.0.0.1",
+        "src_port": 42034,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9090536,
+      "flow": {
+        "src_ip": "10.227.190.244",
+        "dst_ip": "127.0.0.1",
+        "src_port": 14565,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9170535,
+      "flow": {
+        "src_ip": "10.247.66.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45620,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9250536,
+      "flow": {
+        "src_ip": "10.187.241.134",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65180,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9330535,
+      "flow": {
+        "src_ip": "10.53.133.66",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58026,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9410534,
+      "flow": {
+        "src_ip": "10.81.159.134",
+        "dst_ip": "127.0.0.1",
+        "src_port": 15441,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9490535,
+      "flow": {
+        "src_ip": "10.64.38.180",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34096,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9570534,
+      "flow": {
+        "src_ip": "10.177.123.11",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7373,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9650536,
+      "flow": {
+        "src_ip": "10.93.143.8",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52526,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9730535,
+      "flow": {
+        "src_ip": "10.243.229.102",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21056,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9810536,
+      "flow": {
+        "src_ip": "10.220.190.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 34640,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9890535,
+      "flow": {
+        "src_ip": "10.69.106.60",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50757,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331785.9970534,
+      "flow": {
+        "src_ip": "10.193.255.141",
+        "dst_ip": "127.0.0.1",
+        "src_port": 7916,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    },
+    {
+      "timestamp": 1790331786.0050535,
+      "flow": {
+        "src_ip": "10.201.95.54",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59278,
+        "dst_port": 80,
+        "protocol": "UDP"
+      },
+      "attack_family": "UDP_FLOOD",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate UDP flood targeting service port"
+    }
+  ]
+}

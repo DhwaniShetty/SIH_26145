@@ -178,14 +178,12 @@ def inference_worker(results_dir, onnx_engine, task_queue, alert_queue, stop_eve
     normalizer = AlertNormalizer()
     correlator = AlertCorrelator(time_window_seconds=600)
     
-    while True:
+    while not stop_event.is_set():
         try:
-            batch = task_queue.get(timeout=0.1)
+            batch = task_queue.get(timeout=0.05)
         except queue.Empty:
-            if stop_event.is_set():
-                break
             continue
-        if batch == "STOP":
+        if batch == "STOP" or stop_event.is_set():
             break
         try:
             for task in batch:
@@ -393,6 +391,10 @@ def run_e2e_pipeline(scenario: str = "random", duration: Optional[float] = None)
     prev_raw_ts = None
     running = True
 
+    last_telem_t = t_start
+    last_telem_pkts = 0
+    last_telem_bytes = 0
+
     while running and not stop_event.is_set():
         for pcap_file, target_count in plan:
             if stop_event.is_set() or (duration and (time.perf_counter() - t_start >= duration)):
@@ -445,17 +447,30 @@ def run_e2e_pipeline(scenario: str = "random", duration: Optional[float] = None)
                     for det_name, feats in fired_features.items():
                         local_batch.append((det_name, feats, clean_meta, ts))
                         if len(local_batch) >= 50:
+                            while task_queue.qsize() > 40 and not stop_event.is_set():
+                                time.sleep(0.01)
                             try:
                                 task_queue.put(local_batch, timeout=0.1)
                             except queue.Full:
                                 pass
                             local_batch = []
 
-                if total_pkts % 500 == 0:
-                    elapsed = max(0.001, time.perf_counter() - t_start)
-                    pps = total_pkts / elapsed
-                    mbps = (total_bytes * 8) / (elapsed * 1_000_000)
+                # Micro-pacing: throttle to ~2500 - 3500 pkts/s to simulate realistic wire speed
+                if pkts_processed % 40 == 0:
+                    time.sleep(0.012)
+
+                # Periodic high-frequency telemetry update (every ~0.4s)
+                now = time.perf_counter()
+                if now - last_telem_t >= 0.4:
+                    window_dt = max(0.001, now - last_telem_t)
+                    window_pkts = total_pkts - last_telem_pkts
+                    window_bytes = total_bytes - last_telem_bytes
+                    pps = window_pkts / window_dt
+                    mbps = (window_bytes * 8) / (window_dt * 1_000_000)
                     update_telemetry(pps, mbps, len(distinct_flows), 0.35, status="STREAMING")
+                    last_telem_t = now
+                    last_telem_pkts = total_pkts
+                    last_telem_bytes = total_bytes
 
         if not running or not duration or (duration and (time.perf_counter() - t_start >= duration)):
             break
@@ -466,22 +481,30 @@ def run_e2e_pipeline(scenario: str = "random", duration: Optional[float] = None)
         except queue.Full:
             pass
 
-    # Stop inference workers gracefully by sending STOP sentinel
-    for _ in workers:
-        try:
-            task_queue.put("STOP", timeout=2.0)
-        except queue.Full:
-            pass
-    for w in workers:
-        w.join(timeout=5.0)
+    # Signal all workers to stop immediately
     stop_event.set()
     
-    # All workers finished; now signal db_thread to drain and close
+    # Drain remaining task queue items so workers can exit without delay
+    while not task_queue.empty():
+        try:
+            task_queue.get_nowait()
+        except queue.Empty:
+            break
+
+    for _ in workers:
+        try:
+            task_queue.put("STOP", timeout=0.1)
+        except Exception:
+            pass
+    for w in workers:
+        w.join(timeout=1.0)
+    
+    # Signal db_thread to drain and close
     try:
-        alert_queue.put("STOP", timeout=1.0)
-    except queue.Full:
+        alert_queue.put("STOP", timeout=0.5)
+    except Exception:
         pass
-    db_thread.join(timeout=5.0)
+    db_thread.join(timeout=2.0)
 
     elapsed = max(0.001, time.perf_counter() - t_start)
     final_pps = total_pkts / elapsed

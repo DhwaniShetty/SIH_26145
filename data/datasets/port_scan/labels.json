@@ -1,0 +1,547 @@
+{
+  "attack": "port_scan",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.7386863,
+      "flow": {
+        "src_ip": "192.168.200.5",
+        "dst_ip": "10.144.42.211",
+        "src_port": 12383,
+        "dst_port": 56680,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331785.7836864,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.65.38.171",
+        "src_port": 37637,
+        "dst_port": 12678,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331785.8286862,
+      "flow": {
+        "src_ip": "192.168.200.4",
+        "dst_ip": "10.93.135.100",
+        "src_port": 33969,
+        "dst_port": 52422,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331785.8736863,
+      "flow": {
+        "src_ip": "192.168.200.4",
+        "dst_ip": "10.225.83.37",
+        "src_port": 25927,
+        "dst_port": 41957,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331785.9186864,
+      "flow": {
+        "src_ip": "192.168.200.2",
+        "dst_ip": "10.248.78.125",
+        "src_port": 12214,
+        "dst_port": 52814,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331785.9636862,
+      "flow": {
+        "src_ip": "192.168.200.6",
+        "dst_ip": "10.233.51.107",
+        "src_port": 44820,
+        "dst_port": 19128,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.0086863,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.37.162.53",
+        "src_port": 19075,
+        "dst_port": 24247,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.0536864,
+      "flow": {
+        "src_ip": "192.168.200.8",
+        "dst_ip": "10.77.6.61",
+        "src_port": 53024,
+        "dst_port": 38085,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.0986862,
+      "flow": {
+        "src_ip": "192.168.200.8",
+        "dst_ip": "10.240.169.231",
+        "src_port": 54124,
+        "dst_port": 4054,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.1436863,
+      "flow": {
+        "src_ip": "192.168.200.3",
+        "dst_ip": "10.247.139.120",
+        "src_port": 22854,
+        "dst_port": 64670,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.1886864,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.108.173.119",
+        "src_port": 27514,
+        "dst_port": 7542,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.2336862,
+      "flow": {
+        "src_ip": "192.168.200.3",
+        "dst_ip": "10.24.26.201",
+        "src_port": 15293,
+        "dst_port": 56429,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.2786863,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.227.126.113",
+        "src_port": 61434,
+        "dst_port": 6249,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.3236864,
+      "flow": {
+        "src_ip": "192.168.200.10",
+        "dst_ip": "10.147.42.254",
+        "src_port": 60336,
+        "dst_port": 32218,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.3686864,
+      "flow": {
+        "src_ip": "192.168.200.5",
+        "dst_ip": "10.145.58.105",
+        "src_port": 54681,
+        "dst_port": 44049,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.4136863,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.185.75.213",
+        "src_port": 37250,
+        "dst_port": 6971,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.4586864,
+      "flow": {
+        "src_ip": "192.168.200.1",
+        "dst_ip": "10.127.228.183",
+        "src_port": 46568,
+        "dst_port": 58737,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.5036864,
+      "flow": {
+        "src_ip": "192.168.200.6",
+        "dst_ip": "10.165.5.195",
+        "src_port": 21309,
+        "dst_port": 51496,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.5486863,
+      "flow": {
+        "src_ip": "192.168.200.6",
+        "dst_ip": "10.223.88.71",
+        "src_port": 8655,
+        "dst_port": 43599,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.5936863,
+      "flow": {
+        "src_ip": "192.168.200.2",
+        "dst_ip": "10.144.154.208",
+        "src_port": 50915,
+        "dst_port": 61008,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.6386864,
+      "flow": {
+        "src_ip": "192.168.200.5",
+        "dst_ip": "10.182.205.112",
+        "src_port": 26758,
+        "dst_port": 24889,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.6836863,
+      "flow": {
+        "src_ip": "192.168.200.6",
+        "dst_ip": "10.169.106.106",
+        "src_port": 16845,
+        "dst_port": 28943,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.7286863,
+      "flow": {
+        "src_ip": "192.168.200.10",
+        "dst_ip": "10.199.143.166",
+        "src_port": 22587,
+        "dst_port": 49364,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.7736864,
+      "flow": {
+        "src_ip": "192.168.200.7",
+        "dst_ip": "10.89.59.242",
+        "src_port": 9856,
+        "dst_port": 27942,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.8186862,
+      "flow": {
+        "src_ip": "192.168.200.4",
+        "dst_ip": "10.96.55.209",
+        "src_port": 56673,
+        "dst_port": 54948,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.8636863,
+      "flow": {
+        "src_ip": "192.168.200.4",
+        "dst_ip": "10.14.0.40",
+        "src_port": 4839,
+        "dst_port": 192,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    },
+    {
+      "timestamp": 1790331786.9086864,
+      "flow": {
+        "src_ip": "192.168.200.2",
+        "dst_ip": "10.19.251.244",
+        "src_port": 63897,
+        "dst_port": 41281,
+        "protocol": "TCP"
+      },
+      "attack_family": "PORT_SCAN",
+      "severity": "MEDIUM",
+      "confidence": 0.82,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "Hybrid port scan detected",
+      "features": {
+        "scan_type": "hybrid",
+        "unique_ports": 400
+      }
+    }
+  ]
+}

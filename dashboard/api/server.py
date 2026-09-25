@@ -6,7 +6,7 @@ import asyncio
 import threading
 import subprocess
 from fastapi import FastAPI, Query, HTTPException, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -15,6 +15,14 @@ from typing import List, Optional, Dict, Any
 # Ensure alerting store can be imported without importing ingest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from alerting.store import AlertStore
+
+# Dataset Replay data source
+try:
+    from datasource.dataset_replay import DatasetReplaySource
+    _DATASET_REPLAY_AVAILABLE = True
+except ImportError:
+    _DATASET_REPLAY_AVAILABLE = False
+    DatasetReplaySource = None
 
 # Production mode: Kafka + ClickHouse
 PIPELINE_MODE = os.environ.get("PIPELINE_MODE", "local")  # "local" or "kafka"
@@ -271,6 +279,8 @@ async def stream_live_events(request: Request):
                     try: snap = _kafka_telem_queue.get_nowait()
                     except Exception: break
                 telem = snap if snap else get_current_telemetry()
+            elif _data_source_mode == "dataset" and _dataset_source is not None:
+                telem = _dataset_source.read_telemetry()
             else:
                 telem = get_current_telemetry()
             yield f"event: telemetry\ndata: {json.dumps(telem)}\n\n"
@@ -289,15 +299,41 @@ async def stream_live_events(request: Request):
                         drained += 1
                     except Exception:
                         break
+            elif _data_source_mode == "dataset" and _dataset_source is not None and _dataset_source.is_running():
+                # Drain dataset replay alerts into SSE stream
+                dataset_alerts = _dataset_source.read_alerts(since_ts=last_ts)
+                yielded_alerts = 0
+                for alert_dict in dataset_alerts:
+                    alert_id = alert_dict.get("alert_id", "")
+                    if alert_id and alert_id not in sent_alert_ids:
+                        sent_alert_ids.add(alert_id)
+                        last_ts = max(last_ts, alert_dict.get("timestamp", last_ts))
+                        yield f"event: alert\ndata: {json.dumps(alert_dict)}\n\n"
+                        yielded_alerts += 1
+                        if yielded_alerts >= 50:
+                            break
+                if len(sent_alert_ids) > 10000:
+                    sent_alert_ids = set(list(sent_alert_ids)[-5000:])
             else:
-                recent_alerts = store.read_alerts(start_time=last_ts)
-                for a in recent_alerts:
-                    if a.alert_id not in sent_alert_ids:
-                        sent_alert_ids.add(a.alert_id)
-                        last_ts = max(last_ts, a.timestamp)
-                    yield f"event: alert\ndata: {json.dumps(a.model_dump())}\n\n"
+                # Only stream alerts when a simulation is actively running
+                if current_replay_process is not None and current_replay_process.poll() is None:
+                    recent_alerts = store.read_alerts(start_time=last_ts)
+                    yielded_alerts = 0
+                    for a in recent_alerts:
+                        if a.alert_id not in sent_alert_ids:
+                            sent_alert_ids.add(a.alert_id)
+                            last_ts = max(last_ts, a.timestamp)
+                            yield f"event: alert\ndata: {json.dumps(a.model_dump())}\n\n"
+                            yielded_alerts += 1
+                            if yielded_alerts >= 50:
+                                break
+                    if len(sent_alert_ids) > 10000:
+                        sent_alert_ids = set(list(sent_alert_ids)[-5000:])
+                else:
+                    last_ts = time.time()
 
             await asyncio.sleep(0.8)
+
 
     return StreamingResponse(
         event_generator(),
@@ -312,26 +348,43 @@ async def stream_live_events(request: Request):
 current_replay_process: Optional[subprocess.Popen] = None
 replay_lock = threading.Lock()
 
+# ── Dataset replay source (singleton) ────────────────────────────────────────
+_data_source_mode: str = "simulated"   # "simulated" | "dataset"
+_dataset_source: Optional[Any] = None
+_dataset_source_lock = threading.Lock()
+
+def _get_or_create_dataset_source() -> Optional[Any]:
+    """Lazily initialise DatasetReplaySource singleton."""
+    global _dataset_source
+    if not _DATASET_REPLAY_AVAILABLE:
+        return None
+    with _dataset_source_lock:
+        if _dataset_source is None:
+            data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data'))
+            _dataset_source = DatasetReplaySource(data_dir=data_dir, speed_factor=1.0)
+        return _dataset_source
+
 def stop_active_replay():
-    """Recursively terminates any active background replay subprocess."""
+    """Recursively terminates any active background replay subprocess or dataset source."""
     global current_replay_process
+    # Stop dataset replay if running
+    ds = _dataset_source
+    if ds is not None and ds.is_running():
+        ds.stop()
     with replay_lock:
         if current_replay_process and current_replay_process.poll() is None:
+            pid = current_replay_process.pid
             try:
-                import psutil
-                p = psutil.Process(current_replay_process.pid)
-                for child in p.children(recursive=True):
-                    try:
-                        child.terminate()
-                    except psutil.NoSuchProcess:
-                        pass
-                p.terminate()
-                p.wait(timeout=1.0)
+                if sys.platform == "win32":
+                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(pid)], capture_output=True)
+                else:
+                    import psutil
+                    p = psutil.Process(pid)
+                    for child in p.children(recursive=True):
+                        child.kill()
+                    p.kill()
             except Exception:
-                try:
-                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(current_replay_process.pid)], capture_output=True)
-                except Exception:
-                    pass
+                pass
             current_replay_process = None
             try:
                 telemetry_file = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tests/telemetry.json'))
@@ -349,28 +402,42 @@ def stop_active_replay():
             except Exception:
                 pass
 
-def run_replay_script(scenario: str = "random", duration: Optional[float] = None):
-    """Runs the phase 5 E2E test script in a background process with optional duration limit."""
+def run_replay_script(scenario: str = "random", duration: Optional[float] = None,
+                      mode: str = "simulated"):
+    """Runs either the E2E simulation or the dataset replay, based on `mode`."""
     global current_replay_process
     stop_active_replay()
-    script_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tests/test_phase5_e2e.py'))
-    cmd = [sys.executable, script_path, "--scenario", scenario]
-    if duration and duration > 0:
-        cmd += ["--duration", str(duration)]
-    
-    with replay_lock:
-        current_replay_process = subprocess.Popen(cmd)
-    current_replay_process.wait()
+
+    if mode == "dataset":
+        ds = _get_or_create_dataset_source()
+        if ds is None:
+            import logging; logging.getLogger("server").warning("DatasetReplaySource not available.")
+            return
+        ds.start(scenario=scenario, duration=duration)
+        # Block thread until dataset replay stops
+        while ds.is_running():
+            time.sleep(0.5)
+    else:
+        script_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../tests/test_phase5_e2e.py'))
+        cmd = [sys.executable, script_path, "--scenario", scenario]
+        if duration and duration > 0:
+            cmd += ["--duration", str(duration)]
+        with replay_lock:
+            current_replay_process = subprocess.Popen(cmd)
+        current_replay_process.wait()
 
 @app.post("/api/replay")
 def trigger_replay(
     scenario: Optional[str] = Query("random"),
-    duration: Optional[float] = Query(None)
+    duration: Optional[float] = Query(None),
+    mode: Optional[str] = Query(None)   # "simulated" | "dataset"
 ):
     """
-    Triggers a background simulation of the test dataset with dynamic threat variability.
-    Supports customizable duration (e.g. 20s, 60s, 300s, 900s).
+    Triggers a background simulation or dataset replay.
+    mode: "simulated" (default) | "dataset"
     """
+    global _data_source_mode
+    effective_mode = mode if mode in ("simulated", "dataset") else _data_source_mode
     scenario_clean = scenario if scenario in ["random", "massive_ddos", "stealth_c2_exfil", "recon_storm", "quiet_hours", "coordinated_campaign"] else "random"
     
     scenario_labels = {
@@ -383,12 +450,17 @@ def trigger_replay(
     }
     
     summary_cache.invalidate()
-    thread = threading.Thread(target=run_replay_script, args=(scenario_clean, duration), daemon=True)
+    thread = threading.Thread(
+        target=run_replay_script,
+        args=(scenario_clean, duration, effective_mode),
+        daemon=True)
     thread.start()
     return {
         "status": "Replay started in background",
         "scenario": scenario_labels.get(scenario_clean, "Dynamic Random Mix"),
-        "duration": duration
+        "duration": duration,
+        "mode": effective_mode,
+        "dataset_available": _DATASET_REPLAY_AVAILABLE,
     }
 
 @app.post("/api/replay/stop")
@@ -397,6 +469,32 @@ def stop_replay():
     stop_active_replay()
     summary_cache.invalidate()
     return {"status": "Replay stopped successfully"}
+
+
+@app.get("/api/datasource/mode")
+def get_datasource_mode():
+    """Return the current data-source mode and availability."""
+    ds = _dataset_source
+    return {
+        "mode": _data_source_mode,
+        "simulated_running": current_replay_process is not None and current_replay_process.poll() is None,
+        "dataset_running": ds is not None and ds.is_running(),
+        "dataset_available": _DATASET_REPLAY_AVAILABLE,
+    }
+
+
+@app.post("/api/datasource/mode")
+def set_datasource_mode(mode: str = Query(..., description="simulated | dataset")):
+    """Switch data-source mode.  Stops any currently running replay."""
+    global _data_source_mode
+    if mode not in ("simulated", "dataset"):
+        raise HTTPException(status_code=400, detail="mode must be 'simulated' or 'dataset'")
+    if not _DATASET_REPLAY_AVAILABLE and mode == "dataset":
+        raise HTTPException(status_code=503, detail="DatasetReplaySource not available — check datasource/ install")
+    stop_active_replay()
+    _data_source_mode = mode
+    summary_cache.invalidate()
+    return {"mode": _data_source_mode, "dataset_available": _DATASET_REPLAY_AVAILABLE}
 
 # Mount the static front-end app
 app_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../app'))

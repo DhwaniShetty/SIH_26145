@@ -1,0 +1,2 @@
+src_ip,dst_ip,src_port,dst_port,protocol,timestamp,duration_s,pkt_count,byte_count,pkts_per_sec,bytes_per_sec,avg_pkt_size,iat_mean_ms,iat_std_ms,iat_min_ms,iat_max_ms,syn_count,ack_count,fin_count,rst_count,syn_synack_ratio,dns_query_len,dns_entropy,attack_family,severity,generator
+72.84.84.80,47.49.46.49,0,0,ICMP,1790331785.734131,6819.4774,200,10009,0.03,1.47,50.05,29306.07,439509.525,-1599838.871,1114265.169,0,0,0,0,0.0,0,0.0,C2_BEACON,CRITICAL,fallback

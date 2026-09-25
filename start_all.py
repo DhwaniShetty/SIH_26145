@@ -176,6 +176,7 @@ def main():
     parser.add_argument("--retrain", "-r", action="store_true", help="Force synthetic dataset re-generation and model retraining")
     parser.add_argument("--port", "-p", type=int, default=8000, help="Port to run Dashboard on (default: 8000)")
     parser.add_argument("--no-browser", action="store_true", help="Do not automatically open the browser")
+    parser.add_argument("--reload", action="store_true", help="Enable auto-reload for dashboard developers (watches dashboard/ only)")
     args = parser.parse_args()
 
     root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -221,9 +222,12 @@ def main():
     print("=== Step 3: Starting Dashboard API ===")
     ensure_port_available(args.port)
 
-    print(f"[{time.strftime('%H:%M:%S')}] Launching FastAPI via Uvicorn on port {args.port}...")
+    api_cmd = [sys.executable, "-m", "uvicorn", "dashboard.api.server:app", "--port", str(args.port)]
+    if getattr(args, 'reload', False):
+        api_cmd.extend(["--reload", "--reload-dir", os.path.join(root_dir, "dashboard")])
+
     api_process = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "dashboard.api.server:app", "--reload", "--port", str(args.port)],
+        api_cmd,
         cwd=root_dir
     )
 

@@ -34,44 +34,86 @@ class AlertStore:
             self._conn.execute("PRAGMA temp_store = MEMORY;")
         return self._conn
 
+    def _recover_corrupt_db(self):
+        """Recovers from a corrupt SQLite database file by closing connections and deleting stale files."""
+        if self._conn:
+            try:
+                self._conn.close()
+            except Exception:
+                pass
+            self._conn = None
+        for ext in ["", "-wal", "-shm"]:
+            f = f"{self.db_path}{ext}"
+            if os.path.exists(f):
+                try:
+                    os.remove(f)
+                except Exception:
+                    pass
+
     def _init_db(self):
         with self._lock:
-            conn = self._get_connection()
-            cursor = conn.cursor()
-            
-            cursor.execute('''
-                CREATE TABLE IF NOT EXISTS alerts (
-                    alert_id TEXT PRIMARY KEY,
-                    timestamp REAL,
-                    detector TEXT,
-                    threat_class TEXT,
-                    severity TEXT,
-                    confidence_score REAL,
-                    flow_id_json TEXT,
-                    evidence_json TEXT,
-                    related_alert_ids_json TEXT
-                )
-            ''')
-            
-            # Create indexes for rapid filtering and querying
-            cursor.execute('CREATE INDEX IF NOT EXISTS idx_timestamp ON alerts(timestamp)')
-            cursor.execute('CREATE INDEX IF NOT EXISTS idx_detector ON alerts(detector)')
-            cursor.execute('CREATE INDEX IF NOT EXISTS idx_severity ON alerts(severity)')
-            
-            conn.commit()
+            try:
+                conn = self._get_connection()
+                cursor = conn.cursor()
+                
+                cursor.execute('''
+                    CREATE TABLE IF NOT EXISTS alerts (
+                        alert_id TEXT PRIMARY KEY,
+                        timestamp REAL,
+                        detector TEXT,
+                        threat_class TEXT,
+                        severity TEXT,
+                        confidence_score REAL,
+                        flow_id_json TEXT,
+                        evidence_json TEXT,
+                        related_alert_ids_json TEXT
+                    )
+                ''')
+                
+                # Create indexes for rapid filtering and querying
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_timestamp ON alerts(timestamp)')
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_detector ON alerts(detector)')
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_severity ON alerts(severity)')
+                
+                conn.commit()
+            except sqlite3.DatabaseError:
+                self._recover_corrupt_db()
+                conn = self._get_connection()
+                cursor = conn.cursor()
+                cursor.execute('''
+                    CREATE TABLE IF NOT EXISTS alerts (
+                        alert_id TEXT PRIMARY KEY,
+                        timestamp REAL,
+                        detector TEXT,
+                        threat_class TEXT,
+                        severity TEXT,
+                        confidence_score REAL,
+                        flow_id_json TEXT,
+                        evidence_json TEXT,
+                        related_alert_ids_json TEXT
+                    )
+                ''')
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_timestamp ON alerts(timestamp)')
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_detector ON alerts(detector)')
+                cursor.execute('CREATE INDEX IF NOT EXISTS idx_severity ON alerts(severity)')
+                conn.commit()
 
     def clear(self):
         """Safely clears all records from the alerts table and compacts the database."""
         with self._lock:
             self._write_buffer.clear()
-            conn = self._get_connection()
-            conn.execute("DELETE FROM alerts;")
-            conn.commit()
             try:
-                conn.execute("PRAGMA wal_checkpoint(TRUNCATE);")
-                conn.execute("VACUUM;")
-            except Exception:
-                pass
+                conn = self._get_connection()
+                conn.execute("DELETE FROM alerts;")
+                conn.commit()
+                try:
+                    conn.execute("PRAGMA wal_checkpoint(TRUNCATE);")
+                    conn.execute("VACUUM;")
+                except Exception:
+                    pass
+            except sqlite3.DatabaseError:
+                self._recover_corrupt_db()
+                self._init_db()
             
     def append(self, alert: AlertRecord):
         """

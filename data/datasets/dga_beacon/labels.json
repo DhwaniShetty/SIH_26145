@@ -1,0 +1,4407 @@
+{
+  "attack": "dga_beacon",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.7341316,
+      "flow": {
+        "src_ip": "192.168.1.13",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64620,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ndbogdccc5m75ag.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ndbogdccc5m75ag.biz"
+      }
+    },
+    {
+      "timestamp": 1790331814.343845,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53685,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xmt4vh50yshqrujzcq.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xmt4vh50yshqrujzcq.org"
+      }
+    },
+    {
+      "timestamp": 1790331851.5361092,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64052,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to mefx1bproq.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "mefx1bproq.net"
+      }
+    },
+    {
+      "timestamp": 1790331883.5219824,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56979,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ydbrmw6tqsg.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ydbrmw6tqsg.biz"
+      }
+    },
+    {
+      "timestamp": 1790331901.0675025,
+      "flow": {
+        "src_ip": "192.168.1.43",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57512,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to b22wy5ko6jlyc5hppf.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "b22wy5ko6jlyc5hppf.info"
+      }
+    },
+    {
+      "timestamp": 1790331948.666173,
+      "flow": {
+        "src_ip": "192.168.1.30",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59402,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 77jjao069njyov37m2.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "77jjao069njyov37m2.net"
+      }
+    },
+    {
+      "timestamp": 1790331966.66763,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52974,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 1sifah72b8yxp767ybh8.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "1sifah72b8yxp767ybh8.com"
+      }
+    },
+    {
+      "timestamp": 1790332020.4321337,
+      "flow": {
+        "src_ip": "192.168.1.13",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65238,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 99mt2brmkz.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "99mt2brmkz.net"
+      }
+    },
+    {
+      "timestamp": 1790332039.3629472,
+      "flow": {
+        "src_ip": "192.168.1.13",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63202,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5b6ig71ha.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5b6ig71ha.com"
+      }
+    },
+    {
+      "timestamp": 1790332086.0041094,
+      "flow": {
+        "src_ip": "192.168.1.15",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56324,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 0svl7b125xo6p5.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "0svl7b125xo6p5.biz"
+      }
+    },
+    {
+      "timestamp": 1790332114.3362584,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56424,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5ghg015r.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5ghg015r.net"
+      }
+    },
+    {
+      "timestamp": 1790332155.9326236,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49669,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xgrs0rek50vl7k47cxnv.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xgrs0rek50vl7k47cxnv.biz"
+      }
+    },
+    {
+      "timestamp": 1790332129.6988053,
+      "flow": {
+        "src_ip": "192.168.1.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64258,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to zv5exiu1bliwq.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "zv5exiu1bliwq.org"
+      }
+    },
+    {
+      "timestamp": 1790332253.0027277,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56049,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qpedgr3bego0gx8cb10.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qpedgr3bego0gx8cb10.net"
+      }
+    },
+    {
+      "timestamp": 1790332258.4082067,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58187,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 3eula1zk.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "3eula1zk.info"
+      }
+    },
+    {
+      "timestamp": 1790332123.0558133,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55150,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to di0j1nuxvlg2o03ttt.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "di0j1nuxvlg2o03ttt.biz"
+      }
+    },
+    {
+      "timestamp": 1790332312.6908636,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60726,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 75uq5c632.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "75uq5c632.net"
+      }
+    },
+    {
+      "timestamp": 1790332353.8029807,
+      "flow": {
+        "src_ip": "192.168.1.28",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59782,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 7y5lh5etym9zr4.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "7y5lh5etym9zr4.info"
+      }
+    },
+    {
+      "timestamp": 1790332299.6907258,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56730,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to stguw744tyuba.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "stguw744tyuba.biz"
+      }
+    },
+    {
+      "timestamp": 1790332380.1827981,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60179,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 9wcfotw6f8.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "9wcfotw6f8.org"
+      }
+    },
+    {
+      "timestamp": 1790332376.0377336,
+      "flow": {
+        "src_ip": "192.168.1.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57969,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 2gfg9kgc9vhw1yw1x.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "2gfg9kgc9vhw1yw1x.biz"
+      }
+    },
+    {
+      "timestamp": 1790332435.7528641,
+      "flow": {
+        "src_ip": "192.168.1.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61647,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to d41elzcs9snbr2o6.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "d41elzcs9snbr2o6.org"
+      }
+    },
+    {
+      "timestamp": 1790332544.7301743,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54830,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to t9mxwp74hal.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "t9mxwp74hal.org"
+      }
+    },
+    {
+      "timestamp": 1790332427.6873589,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56147,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to l6ir4g7zk4f1c12ps9.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "l6ir4g7zk4f1c12ps9.biz"
+      }
+    },
+    {
+      "timestamp": 1790332534.7677658,
+      "flow": {
+        "src_ip": "192.168.1.42",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52378,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to nle5f3ezj3s.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "nle5f3ezj3s.biz"
+      }
+    },
+    {
+      "timestamp": 1790332468.468229,
+      "flow": {
+        "src_ip": "192.168.1.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53942,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to stg47arf.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "stg47arf.org"
+      }
+    },
+    {
+      "timestamp": 1790332493.8969607,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58771,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to u9ppzbew7xgh5bztk.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "u9ppzbew7xgh5bztk.info"
+      }
+    },
+    {
+      "timestamp": 1790332671.7988691,
+      "flow": {
+        "src_ip": "192.168.1.39",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56506,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 3g61u9bixlwssxl1havq.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "3g61u9bixlwssxl1havq.com"
+      }
+    },
+    {
+      "timestamp": 1790332649.1002436,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51223,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to m8jalm2g7lzsoj9.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "m8jalm2g7lzsoj9.net"
+      }
+    },
+    {
+      "timestamp": 1790332695.9993384,
+      "flow": {
+        "src_ip": "192.168.1.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61222,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to p1884jfgn.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "p1884jfgn.net"
+      }
+    },
+    {
+      "timestamp": 1790332766.1714334,
+      "flow": {
+        "src_ip": "192.168.1.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50328,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to biijmcsu.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "biijmcsu.net"
+      }
+    },
+    {
+      "timestamp": 1790332739.2111495,
+      "flow": {
+        "src_ip": "192.168.1.16",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51583,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 06st1rxp1c.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "06st1rxp1c.com"
+      }
+    },
+    {
+      "timestamp": 1790332727.6904335,
+      "flow": {
+        "src_ip": "192.168.1.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60850,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to t1hdusm3pxfz0i4h.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "t1hdusm3pxfz0i4h.net"
+      }
+    },
+    {
+      "timestamp": 1790332916.7426052,
+      "flow": {
+        "src_ip": "192.168.1.11",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57128,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 2u0w0t4ferbku9hwj.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "2u0w0t4ferbku9hwj.net"
+      }
+    },
+    {
+      "timestamp": 1790332796.3276005,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52750,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5o22dpjqi456k1xc8.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5o22dpjqi456k1xc8.net"
+      }
+    },
+    {
+      "timestamp": 1790332959.3819258,
+      "flow": {
+        "src_ip": "192.168.1.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55127,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to tfprfygdz4plu8zwv0t.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "tfprfygdz4plu8zwv0t.com"
+      }
+    },
+    {
+      "timestamp": 1790332982.409155,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54542,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xw22fklxz1o7q8ekvex.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xw22fklxz1o7q8ekvex.com"
+      }
+    },
+    {
+      "timestamp": 1790332992.1978571,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63464,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to r48ry7e3ld.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "r48ry7e3ld.info"
+      }
+    },
+    {
+      "timestamp": 1790332985.6899188,
+      "flow": {
+        "src_ip": "192.168.1.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56260,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gtaoquu8d5gh.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gtaoquu8d5gh.net"
+      }
+    },
+    {
+      "timestamp": 1790332936.7976382,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58904,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4rgjy7jkdrmb9.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4rgjy7jkdrmb9.org"
+      }
+    },
+    {
+      "timestamp": 1790332746.6631846,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51099,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 6qwyqlbsvfyk.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "6qwyqlbsvfyk.biz"
+      }
+    },
+    {
+      "timestamp": 1790332949.9978325,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58040,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 52z3dagtjverotrvwr7.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "52z3dagtjverotrvwr7.biz"
+      }
+    },
+    {
+      "timestamp": 1790333146.1437383,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59321,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5dse7gx5l.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5dse7gx5l.info"
+      }
+    },
+    {
+      "timestamp": 1790333015.185478,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64416,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qv2cof7t5r3.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qv2cof7t5r3.biz"
+      }
+    },
+    {
+      "timestamp": 1790333065.4944878,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58831,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ebx18fh5e85lf.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ebx18fh5e85lf.org"
+      }
+    },
+    {
+      "timestamp": 1790333382.7176082,
+      "flow": {
+        "src_ip": "192.168.1.33",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52496,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to lixaybdhj0ahu8.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "lixaybdhj0ahu8.com"
+      }
+    },
+    {
+      "timestamp": 1790333404.5501823,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58892,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to zbol7elhm.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "zbol7elhm.info"
+      }
+    },
+    {
+      "timestamp": 1790332917.96703,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57784,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to i7vy9i1dn4.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "i7vy9i1dn4.com"
+      }
+    },
+    {
+      "timestamp": 1790333320.83726,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53849,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ng6adgk5ut43nvswcc.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ng6adgk5ut43nvswcc.biz"
+      }
+    },
+    {
+      "timestamp": 1790333251.1382763,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49313,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 7d0cz76bqy3k.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "7d0cz76bqy3k.org"
+      }
+    },
+    {
+      "timestamp": 1790333341.1513014,
+      "flow": {
+        "src_ip": "192.168.1.33",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59467,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 1drx05fex76.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "1drx05fex76.net"
+      }
+    },
+    {
+      "timestamp": 1790333552.0963135,
+      "flow": {
+        "src_ip": "192.168.1.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50434,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to btcv5c6c9neda.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "btcv5c6c9neda.org"
+      }
+    },
+    {
+      "timestamp": 1790333286.8389747,
+      "flow": {
+        "src_ip": "192.168.1.20",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58253,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to anvjqz4ipt25.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "anvjqz4ipt25.com"
+      }
+    },
+    {
+      "timestamp": 1790333350.1048937,
+      "flow": {
+        "src_ip": "192.168.1.30",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51172,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to dc77eiqlrs.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "dc77eiqlrs.com"
+      }
+    },
+    {
+      "timestamp": 1790333564.202902,
+      "flow": {
+        "src_ip": "192.168.1.23",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54888,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to y78j5f74.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "y78j5f74.biz"
+      }
+    },
+    {
+      "timestamp": 1790333422.0058932,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54731,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5tw4k7bdndadqi.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5tw4k7bdndadqi.info"
+      }
+    },
+    {
+      "timestamp": 1790333453.4052706,
+      "flow": {
+        "src_ip": "192.168.1.20",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64997,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 773h9ww89f1wi318zi.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "773h9ww89f1wi318zi.com"
+      }
+    },
+    {
+      "timestamp": 1790333595.8083255,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56050,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xfh53mp18q.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xfh53mp18q.com"
+      }
+    },
+    {
+      "timestamp": 1790333551.3264372,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52843,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xuw3ukg2zlmv2uhna.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xuw3ukg2zlmv2uhna.com"
+      }
+    },
+    {
+      "timestamp": 1790333659.4152262,
+      "flow": {
+        "src_ip": "192.168.1.22",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62142,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to v967tfcja700.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "v967tfcja700.info"
+      }
+    },
+    {
+      "timestamp": 1790333330.308988,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49305,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 3n0y97cxy0h136y9.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "3n0y97cxy0h136y9.info"
+      }
+    },
+    {
+      "timestamp": 1790333465.487212,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60852,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qaaokeuw62d.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qaaokeuw62d.org"
+      }
+    },
+    {
+      "timestamp": 1790333526.932115,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50296,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 20otnrdxyyggdp6t.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "20otnrdxyyggdp6t.biz"
+      }
+    },
+    {
+      "timestamp": 1790333567.963956,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55266,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to hn1xoc87zwodr6u.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "hn1xoc87zwodr6u.info"
+      }
+    },
+    {
+      "timestamp": 1790333299.8739223,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49386,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to zgwwazk63y8ckx4hifa0.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "zgwwazk63y8ckx4hifa0.com"
+      }
+    },
+    {
+      "timestamp": 1790333762.414219,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60479,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to u3jnjix10eoa4p54n0.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "u3jnjix10eoa4p54n0.org"
+      }
+    },
+    {
+      "timestamp": 1790333875.0997417,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55567,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to bg7l35ua.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "bg7l35ua.biz"
+      }
+    },
+    {
+      "timestamp": 1790333916.430841,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56334,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to z9uukxmrx02pwx.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "z9uukxmrx02pwx.biz"
+      }
+    },
+    {
+      "timestamp": 1790333437.1826718,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49365,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 7i2ffj7t.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "7i2ffj7t.net"
+      }
+    },
+    {
+      "timestamp": 1790333787.783591,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49385,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to a8y4awgo13jltx464.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "a8y4awgo13jltx464.biz"
+      }
+    },
+    {
+      "timestamp": 1790334277.2290134,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58816,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to omfydcvj1yjs5dhtu.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "omfydcvj1yjs5dhtu.info"
+      }
+    },
+    {
+      "timestamp": 1790334029.1482446,
+      "flow": {
+        "src_ip": "192.168.1.33",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60270,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to eqo7ss16yqgjkddt.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "eqo7ss16yqgjkddt.net"
+      }
+    },
+    {
+      "timestamp": 1790333830.9679706,
+      "flow": {
+        "src_ip": "192.168.1.28",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57531,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to lg5dy3pnz3iwqzp.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "lg5dy3pnz3iwqzp.com"
+      }
+    },
+    {
+      "timestamp": 1790334222.9109764,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51533,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to r4dqguqnlmsjbk.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "r4dqguqnlmsjbk.net"
+      }
+    },
+    {
+      "timestamp": 1790334142.0945249,
+      "flow": {
+        "src_ip": "192.168.1.12",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63745,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to cgzzrehpbx9nsi.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "cgzzrehpbx9nsi.info"
+      }
+    },
+    {
+      "timestamp": 1790333869.8227425,
+      "flow": {
+        "src_ip": "192.168.1.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49746,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to yffdwb7sr7cf.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "yffdwb7sr7cf.biz"
+      }
+    },
+    {
+      "timestamp": 1790333936.479008,
+      "flow": {
+        "src_ip": "192.168.1.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51298,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to apzh171ucsutkbj.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "apzh171ucsutkbj.info"
+      }
+    },
+    {
+      "timestamp": 1790334302.0577972,
+      "flow": {
+        "src_ip": "192.168.1.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57934,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ff86bmsrmowb7.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ff86bmsrmowb7.biz"
+      }
+    },
+    {
+      "timestamp": 1790333908.347805,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54499,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to rzxag0soczk14j.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "rzxag0soczk14j.info"
+      }
+    },
+    {
+      "timestamp": 1790333616.4355168,
+      "flow": {
+        "src_ip": "192.168.1.15",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50409,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to yvy709qr9a9ecm.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "yvy709qr9a9ecm.info"
+      }
+    },
+    {
+      "timestamp": 1790333898.978349,
+      "flow": {
+        "src_ip": "192.168.1.21",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52065,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to kvspv8g1f.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "kvspv8g1f.com"
+      }
+    },
+    {
+      "timestamp": 1790334041.7400644,
+      "flow": {
+        "src_ip": "192.168.1.11",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52987,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to srki1fs98.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "srki1fs98.org"
+      }
+    },
+    {
+      "timestamp": 1790334489.8980575,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58286,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to px1n1emdj9xgu0lp2p8.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "px1n1emdj9xgu0lp2p8.com"
+      }
+    },
+    {
+      "timestamp": 1790334398.7687469,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58620,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to wsg05nd9c.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "wsg05nd9c.info"
+      }
+    },
+    {
+      "timestamp": 1790334028.8518057,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56692,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to s4zv7ck53i71bkkba.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "s4zv7ck53i71bkkba.info"
+      }
+    },
+    {
+      "timestamp": 1790334717.6492934,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56771,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4n5ay701.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4n5ay701.info"
+      }
+    },
+    {
+      "timestamp": 1790334544.5872757,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64727,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to op19i09f8n4gv.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "op19i09f8n4gv.info"
+      }
+    },
+    {
+      "timestamp": 1790334292.444818,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51649,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to wwcyjg3vszikv.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "wwcyjg3vszikv.net"
+      }
+    },
+    {
+      "timestamp": 1790334016.0825434,
+      "flow": {
+        "src_ip": "192.168.1.26",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50105,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to snpkvzkro73rnun.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "snpkvzkro73rnun.org"
+      }
+    },
+    {
+      "timestamp": 1790334584.6393254,
+      "flow": {
+        "src_ip": "192.168.1.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54077,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to l6zzpl37.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "l6zzpl37.net"
+      }
+    },
+    {
+      "timestamp": 1790334513.8300858,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53337,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to od9mnt5p.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "od9mnt5p.org"
+      }
+    },
+    {
+      "timestamp": 1790334233.739325,
+      "flow": {
+        "src_ip": "192.168.1.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60372,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to i2k8k8dpj.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "i2k8k8dpj.biz"
+      }
+    },
+    {
+      "timestamp": 1790334629.1186595,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53544,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gzh470v1fg87eo4.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gzh470v1fg87eo4.org"
+      }
+    },
+    {
+      "timestamp": 1790334769.216633,
+      "flow": {
+        "src_ip": "192.168.1.47",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65453,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to nl3twmg4t1lymxnkh4.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "nl3twmg4t1lymxnkh4.info"
+      }
+    },
+    {
+      "timestamp": 1790334664.923963,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55960,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to zlbf181v.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "zlbf181v.biz"
+      }
+    },
+    {
+      "timestamp": 1790334925.3781407,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56198,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to wredm5k6g.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "wredm5k6g.com"
+      }
+    },
+    {
+      "timestamp": 1790334651.5862384,
+      "flow": {
+        "src_ip": "192.168.1.12",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49480,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 7x9uonixw801yvc5m.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "7x9uonixw801yvc5m.com"
+      }
+    },
+    {
+      "timestamp": 1790334531.3267574,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49901,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 6xyodamh9ie1tc.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "6xyodamh9ie1tc.info"
+      }
+    },
+    {
+      "timestamp": 1790335152.0369565,
+      "flow": {
+        "src_ip": "192.168.1.33",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53686,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to pf6rs74mpfodhehb7v.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "pf6rs74mpfodhehb7v.com"
+      }
+    },
+    {
+      "timestamp": 1790335097.1669393,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56430,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to rx717ddi8wgz4g74nmhr.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "rx717ddi8wgz4g74nmhr.info"
+      }
+    },
+    {
+      "timestamp": 1790334332.0759919,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61349,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to rysizlnml5i58ws9lej.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "rysizlnml5i58ws9lej.net"
+      }
+    },
+    {
+      "timestamp": 1790334949.3103545,
+      "flow": {
+        "src_ip": "192.168.1.47",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54817,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to o8gyybayl.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "o8gyybayl.info"
+      }
+    },
+    {
+      "timestamp": 1790334703.0573711,
+      "flow": {
+        "src_ip": "192.168.1.49",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52111,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to s4bw1dn5rg.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "s4bw1dn5rg.org"
+      }
+    },
+    {
+      "timestamp": 1790334673.4530818,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54650,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4j5psh0r0tnc2t4uph.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4j5psh0r0tnc2t4uph.info"
+      }
+    },
+    {
+      "timestamp": 1790334871.5210836,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54576,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to d9dfht4od4wgxu.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "d9dfht4od4wgxu.org"
+      }
+    },
+    {
+      "timestamp": 1790334796.5437536,
+      "flow": {
+        "src_ip": "192.168.1.27",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58807,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 3g1lueshf.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "3g1lueshf.org"
+      }
+    },
+    {
+      "timestamp": 1790335032.0983613,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62140,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to sstnq1vmkp53hvul8tg.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "sstnq1vmkp53hvul8tg.biz"
+      }
+    },
+    {
+      "timestamp": 1790334976.392101,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63044,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to rc7951pom7x5ux5fdu.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "rc7951pom7x5ux5fdu.net"
+      }
+    },
+    {
+      "timestamp": 1790335127.737724,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65029,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to yohwkwq14l4.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "yohwkwq14l4.biz"
+      }
+    },
+    {
+      "timestamp": 1790334531.915844,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61452,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to jwn7mxsidhzyu.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "jwn7mxsidhzyu.org"
+      }
+    },
+    {
+      "timestamp": 1790334951.2068956,
+      "flow": {
+        "src_ip": "192.168.1.43",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60994,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to fdymhmpb6nnuuf6mfud.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "fdymhmpb6nnuuf6mfud.biz"
+      }
+    },
+    {
+      "timestamp": 1790334755.1268601,
+      "flow": {
+        "src_ip": "192.168.1.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63838,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to vlra2a9l08bryrcy14.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "vlra2a9l08bryrcy14.biz"
+      }
+    },
+    {
+      "timestamp": 1790335291.541451,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55517,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to lzbpfj1s.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "lzbpfj1s.com"
+      }
+    },
+    {
+      "timestamp": 1790335302.0317338,
+      "flow": {
+        "src_ip": "192.168.1.46",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64713,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qt71j7rkbqc6.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qt71j7rkbqc6.biz"
+      }
+    },
+    {
+      "timestamp": 1790335074.9483402,
+      "flow": {
+        "src_ip": "192.168.1.13",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53279,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to jfah3h1bsk18dja1x9.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "jfah3h1bsk18dja1x9.biz"
+      }
+    },
+    {
+      "timestamp": 1790335725.970191,
+      "flow": {
+        "src_ip": "192.168.1.46",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64762,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to hxu2me7bgu93exwuc9.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "hxu2me7bgu93exwuc9.info"
+      }
+    },
+    {
+      "timestamp": 1790334802.0533574,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64528,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 48fb97y3ohkd5oah5pb.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "48fb97y3ohkd5oah5pb.net"
+      }
+    },
+    {
+      "timestamp": 1790335472.7648659,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62904,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to symanshmaiq2ptahn.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "symanshmaiq2ptahn.com"
+      }
+    },
+    {
+      "timestamp": 1790334732.7134995,
+      "flow": {
+        "src_ip": "192.168.1.26",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59502,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to lmo9rb3c2uiog.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "lmo9rb3c2uiog.org"
+      }
+    },
+    {
+      "timestamp": 1790335710.3200088,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49293,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to y83o1u2almoh0ypsrr.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "y83o1u2almoh0ypsrr.biz"
+      }
+    },
+    {
+      "timestamp": 1790335694.4203324,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54914,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gte81kjbyd2vik51j8.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gte81kjbyd2vik51j8.net"
+      }
+    },
+    {
+      "timestamp": 1790335421.6267395,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53216,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ubkqrwxcpdbrzn105.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ubkqrwxcpdbrzn105.com"
+      }
+    },
+    {
+      "timestamp": 1790334709.4746118,
+      "flow": {
+        "src_ip": "192.168.1.15",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53664,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to h015lfg9f0x.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "h015lfg9f0x.info"
+      }
+    },
+    {
+      "timestamp": 1790335520.4903412,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55914,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 56ptoutrrhjmzzscc.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "56ptoutrrhjmzzscc.info"
+      }
+    },
+    {
+      "timestamp": 1790335669.4976728,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61874,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to y8ch1xwihnk9hn.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "y8ch1xwihnk9hn.net"
+      }
+    },
+    {
+      "timestamp": 1790335329.8737664,
+      "flow": {
+        "src_ip": "192.168.1.39",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50722,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to dk7wef45w60grah4l7.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "dk7wef45w60grah4l7.biz"
+      }
+    },
+    {
+      "timestamp": 1790335582.2333913,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 59982,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 0n6n63qnsft3bgqvj.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "0n6n63qnsft3bgqvj.info"
+      }
+    },
+    {
+      "timestamp": 1790336104.7421994,
+      "flow": {
+        "src_ip": "192.168.1.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55664,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4m95fro6r8il.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4m95fro6r8il.net"
+      }
+    },
+    {
+      "timestamp": 1790335912.5263367,
+      "flow": {
+        "src_ip": "192.168.1.13",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55413,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xmwy10ff.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xmwy10ff.com"
+      }
+    },
+    {
+      "timestamp": 1790335111.775796,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61068,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to l1vaoyn7j7xysifwj34g.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "l1vaoyn7j7xysifwj34g.biz"
+      }
+    },
+    {
+      "timestamp": 1790335446.6190088,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61021,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to zsv92k5ht6yr0lvo.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "zsv92k5ht6yr0lvo.org"
+      }
+    },
+    {
+      "timestamp": 1790336037.0568259,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62252,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to rrz2vkm303v4xz4jpqdk.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "rrz2vkm303v4xz4jpqdk.info"
+      }
+    },
+    {
+      "timestamp": 1790335627.589378,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63493,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4lz1n53nux69l07t2t.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4lz1n53nux69l07t2t.biz"
+      }
+    },
+    {
+      "timestamp": 1790336275.5029404,
+      "flow": {
+        "src_ip": "192.168.1.43",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58290,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 1gn5p43hdtm15l.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "1gn5p43hdtm15l.net"
+      }
+    },
+    {
+      "timestamp": 1790335833.2720194,
+      "flow": {
+        "src_ip": "192.168.1.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51727,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to dmup6qas.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "dmup6qas.info"
+      }
+    },
+    {
+      "timestamp": 1790335610.1554534,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50760,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to c94s6c3r0v3de4njuz.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "c94s6c3r0v3de4njuz.net"
+      }
+    },
+    {
+      "timestamp": 1790335643.6402254,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64099,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 8s7td1whio9.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "8s7td1whio9.org"
+      }
+    },
+    {
+      "timestamp": 1790335769.4762,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61164,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gtybplvzx2s2hy.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gtybplvzx2s2hy.info"
+      }
+    },
+    {
+      "timestamp": 1790335915.0946841,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54895,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to jf42jhojiqodosx95km.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "jf42jhojiqodosx95km.info"
+      }
+    },
+    {
+      "timestamp": 1790336078.0640914,
+      "flow": {
+        "src_ip": "192.168.1.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51325,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to bowr2euhd0.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "bowr2euhd0.com"
+      }
+    },
+    {
+      "timestamp": 1790334677.9477422,
+      "flow": {
+        "src_ip": "192.168.1.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51075,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to yosbbuusmnwyu8in27dh.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "yosbbuusmnwyu8in27dh.net"
+      }
+    },
+    {
+      "timestamp": 1790335792.2129114,
+      "flow": {
+        "src_ip": "192.168.1.47",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63395,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to oioflzpo9wdz2wscz6pj.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "oioflzpo9wdz2wscz6pj.com"
+      }
+    },
+    {
+      "timestamp": 1790336054.2804823,
+      "flow": {
+        "src_ip": "192.168.1.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61519,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to z6brvbooa4t.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "z6brvbooa4t.com"
+      }
+    },
+    {
+      "timestamp": 1790335980.762487,
+      "flow": {
+        "src_ip": "192.168.1.39",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56876,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to s69ajpvgiw1qntd6k8.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "s69ajpvgiw1qntd6k8.net"
+      }
+    },
+    {
+      "timestamp": 1790336846.9819493,
+      "flow": {
+        "src_ip": "192.168.1.28",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55014,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to tkk63lps2dgkmm93.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "tkk63lps2dgkmm93.net"
+      }
+    },
+    {
+      "timestamp": 1790335660.0282085,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63555,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 6jesso0afw.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "6jesso0afw.org"
+      }
+    },
+    {
+      "timestamp": 1790336661.8035266,
+      "flow": {
+        "src_ip": "192.168.1.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52404,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to kh0swwgpvfyfo.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "kh0swwgpvfyfo.info"
+      }
+    },
+    {
+      "timestamp": 1790336401.6449144,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52443,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to t4yohhv2dmc.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "t4yohhv2dmc.net"
+      }
+    },
+    {
+      "timestamp": 1790336099.8301165,
+      "flow": {
+        "src_ip": "192.168.1.46",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54627,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ircqque59.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ircqque59.info"
+      }
+    },
+    {
+      "timestamp": 1790336135.9606888,
+      "flow": {
+        "src_ip": "192.168.1.39",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53998,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 98jvvauhvd6ue6r.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "98jvvauhvd6ue6r.org"
+      }
+    },
+    {
+      "timestamp": 1790336694.9225798,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58376,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 48d869pu2cjausgnco9.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "48d869pu2cjausgnco9.org"
+      }
+    },
+    {
+      "timestamp": 1790336719.409279,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51144,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to t8q05ryr80kn0wp.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "t8q05ryr80kn0wp.biz"
+      }
+    },
+    {
+      "timestamp": 1790337097.3042142,
+      "flow": {
+        "src_ip": "192.168.1.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62174,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to uoli0sax.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "uoli0sax.com"
+      }
+    },
+    {
+      "timestamp": 1790336420.7097,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 53379,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to wuscq9p9ls7kk.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "wuscq9p9ls7kk.net"
+      }
+    },
+    {
+      "timestamp": 1790336246.4321485,
+      "flow": {
+        "src_ip": "192.168.1.23",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54641,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to tm1pic1m.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "tm1pic1m.info"
+      }
+    },
+    {
+      "timestamp": 1790336328.4145775,
+      "flow": {
+        "src_ip": "192.168.1.46",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65034,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to d2jkzba8crwiaackwtj.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "d2jkzba8crwiaackwtj.com"
+      }
+    },
+    {
+      "timestamp": 1790336525.6242173,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58038,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 3nt0w4do3m6c0j.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "3nt0w4do3m6c0j.com"
+      }
+    },
+    {
+      "timestamp": 1790336895.7554255,
+      "flow": {
+        "src_ip": "192.168.1.21",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62332,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to sddqpzt46nwjmg5zp32.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "sddqpzt46nwjmg5zp32.biz"
+      }
+    },
+    {
+      "timestamp": 1790337497.0008998,
+      "flow": {
+        "src_ip": "192.168.1.34",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63743,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5hzwhxei.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5hzwhxei.org"
+      }
+    },
+    {
+      "timestamp": 1790336813.0436563,
+      "flow": {
+        "src_ip": "192.168.1.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52720,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4wu3lkr2u9r09.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4wu3lkr2u9r09.biz"
+      }
+    },
+    {
+      "timestamp": 1790336578.960236,
+      "flow": {
+        "src_ip": "192.168.1.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56694,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to eb6cs0rk671yf.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "eb6cs0rk671yf.net"
+      }
+    },
+    {
+      "timestamp": 1790336490.6843433,
+      "flow": {
+        "src_ip": "192.168.1.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 58634,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to xawdoajy0e9.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "xawdoajy0e9.org"
+      }
+    },
+    {
+      "timestamp": 1790336727.0562112,
+      "flow": {
+        "src_ip": "192.168.1.10",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56977,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 0qcf74we12hlq30.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "0qcf74we12hlq30.net"
+      }
+    },
+    {
+      "timestamp": 1790336270.9870148,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52956,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 5zirohh8j0cfis.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "5zirohh8j0cfis.org"
+      }
+    },
+    {
+      "timestamp": 1790336712.2471583,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49371,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to b32v2efzbi1p4qg23j.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "b32v2efzbi1p4qg23j.org"
+      }
+    },
+    {
+      "timestamp": 1790336601.4815626,
+      "flow": {
+        "src_ip": "192.168.1.26",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52441,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 37rkagxhighony4v.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "37rkagxhighony4v.net"
+      }
+    },
+    {
+      "timestamp": 1790337298.179263,
+      "flow": {
+        "src_ip": "192.168.1.43",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64291,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to dio7t4ld68rdwk.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "dio7t4ld68rdwk.biz"
+      }
+    },
+    {
+      "timestamp": 1790336513.944385,
+      "flow": {
+        "src_ip": "192.168.1.28",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63392,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to vogb1rsx.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "vogb1rsx.biz"
+      }
+    },
+    {
+      "timestamp": 1790335969.0173757,
+      "flow": {
+        "src_ip": "192.168.1.41",
+        "dst_ip": "127.0.0.1",
+        "src_port": 65009,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qyv58yji4ling.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qyv58yji4ling.org"
+      }
+    },
+    {
+      "timestamp": 1790336027.407736,
+      "flow": {
+        "src_ip": "192.168.1.33",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51012,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to tc364akgf7hxh.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "tc364akgf7hxh.org"
+      }
+    },
+    {
+      "timestamp": 1790336984.7010634,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57905,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to qhnvxeoux2vl.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "qhnvxeoux2vl.net"
+      }
+    },
+    {
+      "timestamp": 1790336736.555808,
+      "flow": {
+        "src_ip": "192.168.1.22",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64859,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 47bkotebtfp.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "47bkotebtfp.com"
+      }
+    },
+    {
+      "timestamp": 1790336730.8972614,
+      "flow": {
+        "src_ip": "192.168.1.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60624,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to x2712mciuiusgisz.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "x2712mciuiusgisz.com"
+      }
+    },
+    {
+      "timestamp": 1790336900.8034499,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54006,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gqhffkxhsbvr9aov48.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gqhffkxhsbvr9aov48.org"
+      }
+    },
+    {
+      "timestamp": 1790337553.6132712,
+      "flow": {
+        "src_ip": "192.168.1.46",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56499,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to hust6aq088uqn4temhh.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "hust6aq088uqn4temhh.biz"
+      }
+    },
+    {
+      "timestamp": 1790337765.7086391,
+      "flow": {
+        "src_ip": "192.168.1.38",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57269,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to td2k3y2z.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "td2k3y2z.net"
+      }
+    },
+    {
+      "timestamp": 1790336299.920932,
+      "flow": {
+        "src_ip": "192.168.1.16",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63340,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 6rtfe7wxllfmtex6dvu.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "6rtfe7wxllfmtex6dvu.biz"
+      }
+    },
+    {
+      "timestamp": 1790337168.2911973,
+      "flow": {
+        "src_ip": "192.168.1.36",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62316,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to dmq4c6dur4a.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "dmq4c6dur4a.net"
+      }
+    },
+    {
+      "timestamp": 1790337756.4061613,
+      "flow": {
+        "src_ip": "192.168.1.12",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57967,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to oq92pgi3.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "oq92pgi3.biz"
+      }
+    },
+    {
+      "timestamp": 1790336860.066249,
+      "flow": {
+        "src_ip": "192.168.1.32",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56420,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to g1fvrdvw5tm1eo.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "g1fvrdvw5tm1eo.biz"
+      }
+    },
+    {
+      "timestamp": 1790337277.8979368,
+      "flow": {
+        "src_ip": "192.168.1.49",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55593,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to pbh00qnbutuh3pjo.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "pbh00qnbutuh3pjo.info"
+      }
+    },
+    {
+      "timestamp": 1790336907.6941051,
+      "flow": {
+        "src_ip": "192.168.1.18",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61562,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to n86a9dp7j4iphon.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "n86a9dp7j4iphon.biz"
+      }
+    },
+    {
+      "timestamp": 1790337557.6369598,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 51412,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to yjn9ky7tsj4o8.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "yjn9ky7tsj4o8.org"
+      }
+    },
+    {
+      "timestamp": 1790337375.807634,
+      "flow": {
+        "src_ip": "192.168.1.47",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62602,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ma7knv3yt1k0.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ma7knv3yt1k0.info"
+      }
+    },
+    {
+      "timestamp": 1790337713.2593973,
+      "flow": {
+        "src_ip": "192.168.1.37",
+        "dst_ip": "127.0.0.1",
+        "src_port": 50877,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ifnnfwoqxpazdv3z2.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ifnnfwoqxpazdv3z2.biz"
+      }
+    },
+    {
+      "timestamp": 1790337021.0878844,
+      "flow": {
+        "src_ip": "192.168.1.29",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57519,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 4f44vszo3n52rw.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "4f44vszo3n52rw.com"
+      }
+    },
+    {
+      "timestamp": 1790336856.2053158,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56860,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to bqowmjrncqc0xvd.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "bqowmjrncqc0xvd.biz"
+      }
+    },
+    {
+      "timestamp": 1790337927.3193028,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57414,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 7bs27j01b5o0i.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "7bs27j01b5o0i.com"
+      }
+    },
+    {
+      "timestamp": 1790337060.559992,
+      "flow": {
+        "src_ip": "192.168.1.40",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64516,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ttqmvvqtrpr8y2heyh5.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ttqmvvqtrpr8y2heyh5.org"
+      }
+    },
+    {
+      "timestamp": 1790336969.4355128,
+      "flow": {
+        "src_ip": "192.168.1.22",
+        "dst_ip": "127.0.0.1",
+        "src_port": 54017,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ae9kkn2kpja.net (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ae9kkn2kpja.net"
+      }
+    },
+    {
+      "timestamp": 1790337106.3378582,
+      "flow": {
+        "src_ip": "192.168.1.17",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55791,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ufz512ugpnuvu5tdqmgx.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ufz512ugpnuvu5tdqmgx.biz"
+      }
+    },
+    {
+      "timestamp": 1790336882.052333,
+      "flow": {
+        "src_ip": "192.168.1.39",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60879,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to ybu6iv5pcz.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "ybu6iv5pcz.org"
+      }
+    },
+    {
+      "timestamp": 1790337253.4699802,
+      "flow": {
+        "src_ip": "192.168.1.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56995,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to v7e2vcq5f8.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "v7e2vcq5f8.info"
+      }
+    },
+    {
+      "timestamp": 1790337394.8859422,
+      "flow": {
+        "src_ip": "192.168.1.44",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55052,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to hrz21zvo5uftxg7.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "hrz21zvo5uftxg7.org"
+      }
+    },
+    {
+      "timestamp": 1790338132.984522,
+      "flow": {
+        "src_ip": "192.168.1.19",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62396,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to idyoo1m353vuuedv8.biz (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "idyoo1m353vuuedv8.biz"
+      }
+    },
+    {
+      "timestamp": 1790337706.9934084,
+      "flow": {
+        "src_ip": "192.168.1.50",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49803,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 8fexetuuipb.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "8fexetuuipb.com"
+      }
+    },
+    {
+      "timestamp": 1790338605.2114983,
+      "flow": {
+        "src_ip": "192.168.1.14",
+        "dst_ip": "127.0.0.1",
+        "src_port": 55431,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to 88pqb3yy4.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "88pqb3yy4.org"
+      }
+    },
+    {
+      "timestamp": 1790337005.3726277,
+      "flow": {
+        "src_ip": "192.168.1.48",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57212,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to b3qz5ysa.org (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "b3qz5ysa.org"
+      }
+    },
+    {
+      "timestamp": 1790337881.80516,
+      "flow": {
+        "src_ip": "192.168.1.43",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57324,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to t1b1o04nk8gb3.com (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "t1b1o04nk8gb3.com"
+      }
+    },
+    {
+      "timestamp": 1790337617.6420257,
+      "flow": {
+        "src_ip": "192.168.1.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 57060,
+        "dst_port": 443,
+        "protocol": "TCP"
+      },
+      "attack_family": "C2_BEACON",
+      "severity": "CRITICAL",
+      "confidence": 0.94,
+      "generator": "dga_gameover_zeus",
+      "generator_mode": "fallback",
+      "explanation": "DGA-generated C2 beacon to gxfdff82.info (family=gameover_zeus)",
+      "features": {
+        "iat_cv": 0.1,
+        "mean_iat": 30.0,
+        "dga_family": "gameover_zeus",
+        "domain": "gxfdff82.info"
+      }
+    }
+  ]
+}

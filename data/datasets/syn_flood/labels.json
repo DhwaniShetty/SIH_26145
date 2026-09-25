@@ -1,0 +1,647 @@
+{
+  "attack": "syn_flood",
+  "target": "127.0.0.1",
+  "generator_mode": "fallback",
+  "labels": [
+    {
+      "timestamp": 1790331785.6880267,
+      "flow": {
+        "src_ip": "10.193.30.189",
+        "dst_ip": "127.0.0.1",
+        "src_port": 63086,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.6980267,
+      "flow": {
+        "src_ip": "10.80.46.231",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16387,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7080266,
+      "flow": {
+        "src_ip": "10.106.8.35",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48533,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7180266,
+      "flow": {
+        "src_ip": "10.133.159.154",
+        "dst_ip": "127.0.0.1",
+        "src_port": 38187,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7280266,
+      "flow": {
+        "src_ip": "10.254.236.122",
+        "dst_ip": "127.0.0.1",
+        "src_port": 26099,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7380266,
+      "flow": {
+        "src_ip": "10.82.139.31",
+        "dst_ip": "127.0.0.1",
+        "src_port": 36335,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7480266,
+      "flow": {
+        "src_ip": "10.163.139.247",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21567,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7580266,
+      "flow": {
+        "src_ip": "10.71.190.208",
+        "dst_ip": "127.0.0.1",
+        "src_port": 4123,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7680266,
+      "flow": {
+        "src_ip": "10.236.143.250",
+        "dst_ip": "127.0.0.1",
+        "src_port": 10631,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7780266,
+      "flow": {
+        "src_ip": "10.46.221.72",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45531,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7880266,
+      "flow": {
+        "src_ip": "10.184.224.68",
+        "dst_ip": "127.0.0.1",
+        "src_port": 60406,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.7980266,
+      "flow": {
+        "src_ip": "10.111.34.175",
+        "dst_ip": "127.0.0.1",
+        "src_port": 36696,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8080266,
+      "flow": {
+        "src_ip": "10.122.76.187",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61204,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8180268,
+      "flow": {
+        "src_ip": "10.141.204.88",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56565,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8280268,
+      "flow": {
+        "src_ip": "10.212.107.254",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35017,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8380268,
+      "flow": {
+        "src_ip": "10.29.254.132",
+        "dst_ip": "127.0.0.1",
+        "src_port": 24452,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8480268,
+      "flow": {
+        "src_ip": "10.3.65.8",
+        "dst_ip": "127.0.0.1",
+        "src_port": 22980,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8580267,
+      "flow": {
+        "src_ip": "10.192.109.183",
+        "dst_ip": "127.0.0.1",
+        "src_port": 31024,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8680267,
+      "flow": {
+        "src_ip": "10.37.214.250",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48751,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8780267,
+      "flow": {
+        "src_ip": "10.37.222.184",
+        "dst_ip": "127.0.0.1",
+        "src_port": 48346,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8880267,
+      "flow": {
+        "src_ip": "10.36.172.5",
+        "dst_ip": "127.0.0.1",
+        "src_port": 35642,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.8980267,
+      "flow": {
+        "src_ip": "10.183.106.202",
+        "dst_ip": "127.0.0.1",
+        "src_port": 28150,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9080267,
+      "flow": {
+        "src_ip": "10.239.61.62",
+        "dst_ip": "127.0.0.1",
+        "src_port": 52018,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9180267,
+      "flow": {
+        "src_ip": "10.219.75.93",
+        "dst_ip": "127.0.0.1",
+        "src_port": 21934,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9280267,
+      "flow": {
+        "src_ip": "10.235.195.45",
+        "dst_ip": "127.0.0.1",
+        "src_port": 61289,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9380267,
+      "flow": {
+        "src_ip": "10.243.137.248",
+        "dst_ip": "127.0.0.1",
+        "src_port": 29143,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9480267,
+      "flow": {
+        "src_ip": "10.116.45.25",
+        "dst_ip": "127.0.0.1",
+        "src_port": 47471,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9580266,
+      "flow": {
+        "src_ip": "10.198.75.209",
+        "dst_ip": "127.0.0.1",
+        "src_port": 56329,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9680266,
+      "flow": {
+        "src_ip": "10.78.84.91",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16748,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9780266,
+      "flow": {
+        "src_ip": "10.219.75.93",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62865,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9880266,
+      "flow": {
+        "src_ip": "10.241.57.24",
+        "dst_ip": "127.0.0.1",
+        "src_port": 49389,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331785.9980266,
+      "flow": {
+        "src_ip": "10.185.172.96",
+        "dst_ip": "127.0.0.1",
+        "src_port": 46613,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0080266,
+      "flow": {
+        "src_ip": "10.67.4.94",
+        "dst_ip": "127.0.0.1",
+        "src_port": 16185,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0180266,
+      "flow": {
+        "src_ip": "10.134.87.238",
+        "dst_ip": "127.0.0.1",
+        "src_port": 62838,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0280266,
+      "flow": {
+        "src_ip": "10.9.127.139",
+        "dst_ip": "127.0.0.1",
+        "src_port": 64423,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0380266,
+      "flow": {
+        "src_ip": "10.116.124.132",
+        "dst_ip": "127.0.0.1",
+        "src_port": 1669,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0480266,
+      "flow": {
+        "src_ip": "10.133.30.57",
+        "dst_ip": "127.0.0.1",
+        "src_port": 36625,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0580266,
+      "flow": {
+        "src_ip": "10.105.99.192",
+        "dst_ip": "127.0.0.1",
+        "src_port": 18036,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0680268,
+      "flow": {
+        "src_ip": "10.255.170.207",
+        "dst_ip": "127.0.0.1",
+        "src_port": 46261,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    },
+    {
+      "timestamp": 1790331786.0780268,
+      "flow": {
+        "src_ip": "10.117.180.185",
+        "dst_ip": "127.0.0.1",
+        "src_port": 45260,
+        "dst_port": 80,
+        "protocol": "TCP"
+      },
+      "attack_family": "SYN_FLOOD",
+      "severity": "CRITICAL",
+      "confidence": 0.97,
+      "generator": "scapy",
+      "generator_mode": "fallback",
+      "explanation": "High-rate SYN with no SYN-ACK (half-open flood)"
+    }
+  ]
+}
