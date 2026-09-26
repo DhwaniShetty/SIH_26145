@@ -37,7 +37,7 @@ def generate_c2_beacon(src_ip, c2_ip, interval=10, jitter=0.1, num_beacons=50):
     return packets, labels
 
 if __name__ == "__main__":
-    src = "10.0.0.50"
+    src = random.choice(["10.0.0.50", "10.0.0.62", "10.0.0.77", "10.0.0.91", "10.0.0.104"])
     c2 = "198.51.100.200"
     pkts, lbls = generate_c2_beacon(src, c2, interval=5, jitter=0.2)
     save_pcap_and_labels("c2_beacon.pcap", pkts, lbls, out_dir=os.path.join(os.path.dirname(__file__), "../../data/"))

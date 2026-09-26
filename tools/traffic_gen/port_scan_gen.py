@@ -60,7 +60,7 @@ def generate_port_scan(src_ip, target_network="192.168.1.", scan_type="horizonta
     return packets, labels
 
 if __name__ == "__main__":
-    src = "10.0.0.50"
+    src = random.choice(["10.0.0.50", "10.0.0.62", "10.0.0.77", "10.0.0.91", "10.0.0.104"])
     
     for s_type in ["horizontal", "vertical", "hybrid"]:
         pkts, lbls = generate_port_scan(src, scan_type=s_type)

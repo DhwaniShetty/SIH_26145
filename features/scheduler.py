@@ -97,6 +97,7 @@ class FeatureScheduler:
             "ddos": self.ddos.extract(dst_ip),
             "recon": self.recon.extract(src_ip)
         }
+        self.ddos.reset_window_counters()
         # print("1s Vector:", vec)
         return vec
 

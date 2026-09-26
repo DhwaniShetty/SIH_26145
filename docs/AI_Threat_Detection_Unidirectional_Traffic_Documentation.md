@@ -1,4 +1,4 @@
-# AI Threat Detection for Unidirectional Traffic
+# Sentrix — AI Threat Detection for Unidirectional Traffic
 
 ## 8. Performance & Scalability (Benchmarking Results)
 

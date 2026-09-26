@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Threat-Detect NOC Console</title>
+    <title>Sentrix NOC Console</title>
     <link rel="stylesheet" href="style.css?v=nocache7">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -12,7 +12,7 @@
         <!-- Header & Controls -->
         <header class="noc-header">
             <div class="logo">
-                <span class="icon">🛡️</span> THREAT_DETECT <span class="highlight">NOC_CONSOLE</span>
+                <span class="icon">🛡️</span> SENTRIX <span class="highlight">NOC_CONSOLE</span>
             </div>
             
             <div class="controls">
@@ -71,9 +71,9 @@
                             <span class="metric-label">LATENCY</span>
                             <span class="metric-value text-accent" id="telem-latency">0.0 ms</span>
                         </div>
-                        <div class="metric-box">
+                        <div class="metric-box metric-box-stacked">
                             <span class="metric-label">DATA DIODE</span>
-                            <span class="metric-value text-success" id="telem-diode">PASSIVE RX</span>
+                            <span class="metric-value text-success" id="telem-diode">PASSIVE RX ONLY (Tx Physically Disabled)</span>
                         </div>
                     </div>
                 </section>

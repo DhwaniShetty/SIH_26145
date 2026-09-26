@@ -42,7 +42,7 @@ def generate_dns_tunnel(src_ip, dns_server, base_domain="evil.com", num_queries=
     return packets, labels
 
 if __name__ == "__main__":
-    src = "10.0.0.50"
+    src = random.choice(["10.0.0.50", "10.0.0.62", "10.0.0.77", "10.0.0.91", "10.0.0.104"])
     dns_server = "8.8.8.8"
     pkts, lbls = generate_dns_tunnel(src, dns_server)
     save_pcap_and_labels("dns_tunnel.pcap", pkts, lbls, out_dir=os.path.join(os.path.dirname(__file__), "../../data/"))

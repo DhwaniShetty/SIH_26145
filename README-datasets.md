@@ -1,4 +1,4 @@
-# THREAT_DETECT — Dataset Ingestion Layer
+# Sentrix — Dataset Ingestion Layer
 
 > ⚠️ **LAB NETWORK ONLY**: All traffic generation scripts are designed exclusively for
 > isolated lab environments (a private VLAN or a virtual/private network).

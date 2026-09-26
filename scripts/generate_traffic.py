@@ -2,7 +2,7 @@
 """
 scripts/generate_traffic.py
 ============================
-Realistic labeled network traffic generator for the THREAT_DETECT dataset
+Realistic labeled network traffic generator for the Sentrix dataset
 ingestion layer.
 
 Produces:
@@ -485,7 +485,7 @@ def generate(attack: str, target: str, duration: int, port: int,
 
 def main():
     parser = argparse.ArgumentParser(
-        description="THREAT_DETECT traffic generator.  "
+        description="Sentrix traffic generator.  "
                     "Run ONLY in an isolated lab/VLAN. NEVER on public networks.")
     parser.add_argument("--attack", choices=list(ATTACKS.keys()) + ["all"],
                         default="syn_flood", help="Attack type to generate")
@@ -504,7 +504,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 60)
-    print(" THREAT_DETECT Traffic Generator")
+    print(" Sentrix Traffic Generator")
     print(" WARNING: Lab/VLAN use ONLY -- never run against production!")
     print("=" * 60)
 

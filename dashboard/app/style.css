@@ -152,8 +152,23 @@ body {
 .metrics-grid { display: flex; flex-direction: column; }
 .metric-box { display: flex; justify-content: space-between; padding: 6px 8px; border-bottom: 1px solid var(--bg-metric-border); }
 .metric-box:last-child { border-bottom: none; }
+.metric-box.metric-box-stacked,
+.metric-box:has(#telem-diode) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    min-height: 46px;
+}
 .metric-label { color: var(--text-muted); }
 .metric-value { font-weight: bold; color: var(--text-primary); }
+.metric-box.metric-box-stacked .metric-value,
+.metric-box:has(#telem-diode) .metric-value {
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
 .text-accent { color: var(--color-info); }
 .text-success { color: var(--color-success); }
 

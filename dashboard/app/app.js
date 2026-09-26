@@ -15,6 +15,27 @@ let trafficTimeLabels = [];
 let trafficPpsData = [];
 let trafficMbpsData = [];
 
+// Threat category colors for consistent doughnut chart slices
+const THREAT_CATEGORY_COLORS = {
+    "DDOS": "#ef4444",              // Red
+    "SYN FLOOD": "#ef4444",
+    "SYN_FLOOD": "#ef4444",
+    "RECON": "#f97316",             // Orange
+    "PORT SCAN": "#f97316",
+    "PORT_SCAN": "#f97316",
+    "BEACONING": "#a855f7",         // Purple
+    "C2 BEACONING": "#a855f7",
+    "C2_BEACON": "#a855f7",
+    "EXFIL": "#0088ff",             // Blue
+    "DNS TUNNELING": "#14b8a6",     // Teal
+    "DNS_TUNNEL": "#14b8a6",
+    "DNS_EXFIL": "#06b6d4",         // Cyan
+    "DGA": "#eab308",               // Yellow
+    "ENCRYPTED": "#6366f1",         // Indigo
+    "UDP_AMPLIFICATION": "#ec4899", // Pink
+    "BENIGN": "#22c55e"             // Green
+};
+
 // Notification Manager State
 let notificationThreshold = 1000;
 let inAppNotifEnabled = true;
@@ -369,7 +390,7 @@ function initCharts() {
             labels: [],
             datasets: [{
                 data: [],
-                backgroundColor: ['#ef4444', '#f97316', '#eab308', '#0088ff', '#a855f7', '#14b8a6'],
+                backgroundColor: [],
                 borderWidth: 1,
                 borderColor: '#111'
             }]
@@ -377,6 +398,7 @@ function initCharts() {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            animation: false, // Disables animation loop to prevent chart from resetting/spinning on high-frequency streaming updates
             plugins: {
                 legend: { position: 'right', labels: { color: '#888', font: { family: 'Consolas' } } }
             },
@@ -561,9 +583,14 @@ function applySeverityFilter() {
 
 function updateClassChart() {
     if (!classChartInstance) return;
-    classChartInstance.data.labels = Object.keys(classCounts);
-    classChartInstance.data.datasets[0].data = Object.values(classCounts);
-    classChartInstance.update();
+    const labels = Object.keys(classCounts);
+    const data = Object.values(classCounts);
+    const colors = labels.map(l => THREAT_CATEGORY_COLORS[l.toUpperCase()] || '#888888');
+
+    classChartInstance.data.labels = labels;
+    classChartInstance.data.datasets[0].data = data;
+    classChartInstance.data.datasets[0].backgroundColor = colors;
+    classChartInstance.update('none');
 }
 
 function updateTrafficChart() {
@@ -644,15 +671,49 @@ async function fetchSummary() {
         const res = await fetch(`${API_BASE}/stats/summary`);
         const data = await res.json();
 
-        // Sync class counts
-        Object.assign(classCounts, data.rate_by_class);
-        updateClassChart();
+        // While actively streaming live alerts, avoid overwriting higher real-time counts with lagging SQLite snapshots
+        const isStreaming = sseSource && sseSource.readyState === EventSource.OPEN && (replayCountdownTimer !== null || currentDataSourceMode === "dataset");
 
-        // Sync top talkers
-        data.top_talkers.forEach(t => {
-            talkerCounts[t.ip] = t.count;
-        });
-        updateTopTalkersUI();
+        if (!isStreaming) {
+            if (data.rate_by_class) {
+                Object.assign(classCounts, data.rate_by_class);
+                updateClassChart();
+            }
+
+            if (data.top_talkers) {
+                data.top_talkers.forEach(t => {
+                    talkerCounts[t.ip] = t.count;
+                });
+                updateTopTalkersUI();
+            }
+        } else {
+            // While streaming, monotonically merge: only update if backend count is higher (e.g., missed packets)
+            let changed = false;
+            if (data.rate_by_class) {
+                for (const [k, v] of Object.entries(data.rate_by_class)) {
+                    if ((classCounts[k] || 0) < v) {
+                        classCounts[k] = v;
+                        changed = true;
+                    }
+                }
+            }
+            if (changed) {
+                updateClassChart();
+            }
+
+            if (data.top_talkers) {
+                let talkersChanged = false;
+                data.top_talkers.forEach(t => {
+                    if ((talkerCounts[t.ip] || 0) < t.count) {
+                        talkerCounts[t.ip] = t.count;
+                        talkersChanged = true;
+                    }
+                });
+                if (talkersChanged) {
+                    updateTopTalkersUI();
+                }
+            }
+        }
     } catch (e) {
         console.error("Fetch summary failed", e);
     }

@@ -1,5 +1,5 @@
 """
-datasource package – modular data-source interface for THREAT_DETECT NOC pipeline.
+datasource package – modular data-source interface for Sentrix NOC pipeline.
 
 Two concrete implementations ship out of the box:
   SimulatedSource     – wraps the existing PCAP-replay + ONNX inference pipeline

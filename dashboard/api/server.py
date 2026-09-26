@@ -166,7 +166,7 @@ async def lifespan(app: FastAPI):
         summary_cache.invalidate()
     yield
 
-app = FastAPI(title="Threat-Detect Dashboard API", lifespan=lifespan)
+app = FastAPI(title="Sentrix Dashboard API", lifespan=lifespan)
 
 # Enable CORS for local development/testing
 app.add_middleware(

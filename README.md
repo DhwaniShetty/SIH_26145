@@ -1,4 +1,4 @@
-# Unidirectional AI Threat Detector
+# Sentrix — Unidirectional AI Threat Detector
 
 An AI/ML pipeline designed to detect cyber threats on unidirectional (data diode / mirroring) tap links. Strict architectural constraints prevent any outward communication, enforcing read-only ingestion.
 

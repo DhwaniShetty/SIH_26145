@@ -57,6 +57,13 @@ class DDoSFeatureExtractor:
             "amp_byte_ratio": amp_ratio
         }
 
+    def reset_window_counters(self):
+        """Resets window-scoped cumulative counters at the end of each evaluation window."""
+        self.syn_count = 0
+        self.syn_ack_count = 0
+        self.amp_req_bytes = 0
+        self.amp_res_bytes = 0
+
     def sweep_stale_state(self, current_time, ttl=60.0):
         stale_dsts = [dst for dst, data in self.dst_state.items() if (current_time - data['last_time']) > ttl]
         for dst in stale_dsts:

@@ -172,7 +172,7 @@ def wait_for_server(url: str, timeout: float = 10.0) -> bool:
     return False
 
 def main():
-    parser = argparse.ArgumentParser(description="Unidirectional AI Threat Detector Pipeline Launcher")
+    parser = argparse.ArgumentParser(description="Sentrix - Unidirectional AI Threat Detector Pipeline Launcher")
     parser.add_argument("--retrain", "-r", action="store_true", help="Force synthetic dataset re-generation and model retraining")
     parser.add_argument("--port", "-p", type=int, default=8000, help="Port to run Dashboard on (default: 8000)")
     parser.add_argument("--no-browser", action="store_true", help="Do not automatically open the browser")
@@ -251,7 +251,7 @@ def main():
         webbrowser.open(dashboard_url)
 
     print("\n=======================================================")
-    print(f"  ThreatDetect Dashboard running at: {dashboard_url}")
+    print(f"  Sentrix Dashboard running at: {dashboard_url}")
     print("  Press Ctrl+C here to terminate the API server.")
     print("=======================================================\n")
 
